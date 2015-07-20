@@ -6,8 +6,8 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 20 Jul 2015 23:25:02 +0100</pubDate>
-    <lastBuildDate>Mon, 20 Jul 2015 23:25:02 +0100</lastBuildDate>
+    <pubDate>Mon, 20 Jul 2015 23:34:11 +0100</pubDate>
+    <lastBuildDate>Mon, 20 Jul 2015 23:34:11 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -24,19 +24,18 @@ world or software world, it is fair to say that this idea has been done before.&
 &lt;p&gt;My main motivation for the project was to gain familiarity with using jQuery and I believe that embarking on a pet
 project is the best, most fun and most productive way to learn a new programming language or framework. &lt;/p&gt;
 
-&lt;p&gt;The main thing I wanted to achieve was actually to allow the site visitor to modify the heading element by focusing it,
+&lt;p&gt;The main objective I wanted to achieve was actually to allow the site visitor to modify the heading element by focusing it,
 deleting existing characters and typing whatever they wanted into the element, complete with a blinking cursor at the end
 of the line as in a terminal. I also added keyboard typing sounds to heighten the effect. Try it now by clicking any of
 the headings within this blog article.&lt;/p&gt;
 
 &lt;h2 class=&quot;console-writer&quot; cw-typing-sound=&quot;true&quot;&gt;ConsoleWriter&lt;/h2&gt;
 
-&lt;p&gt;I packaged the code up into a jQuery plugin:
-&lt;a href=&quot;https://github.com/robinrob/consolewriter.jquery.js&quot;&gt;Inline-Editor&lt;/a&gt;, designed with a focus on user-friendliness
-and configurability using options. The heading &amp;quot;ConsoleWriter&amp;quot; above this paragraph shows the idea, using the default
-method of usage which requires just adding the &lt;code&gt;console-writer&lt;/code&gt; class to the element. Reload the page
-again to see the typewriter effect. You can modify the heading&amp;#39;s contents by focusing the heading and typing.
-Other demos can be viewed in the demo HTML file included with the project.&lt;/p&gt;
+&lt;p&gt;I packaged the project up as a jQuery plugin: &lt;a href=&quot;https://github.com/robinrob/consolewriter.jquery.js&quot;&gt;ConsoleWriter&lt;/a&gt;,
+designed with a focus on user-friendliness and configurability using options. The heading above this paragraph displays the default method of usage which requires
+just adding the &lt;code&gt;console-writer&lt;/code&gt; class to the element. Reload the page again to see the typewriter effect. The &lt;code&gt;readme&lt;/code&gt;
+file included in the repo describes the options and how to set them. There is also a &lt;code&gt;demo.html&lt;/code&gt; file which shows
+example usages.&lt;/p&gt;
 </description>
         <pubDate>Wed, 01 Jul 2015 00:00:00 +0100</pubDate>
         <link>https://rsmith.io/blog/console-writer-jquery-plugin</link>
