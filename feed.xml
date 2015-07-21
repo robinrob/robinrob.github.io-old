@@ -6,8 +6,8 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 20 Jul 2015 23:59:03 +0100</pubDate>
-    <lastBuildDate>Mon, 20 Jul 2015 23:59:03 +0100</lastBuildDate>
+    <pubDate>Tue, 21 Jul 2015 19:28:23 +0100</pubDate>
+    <lastBuildDate>Tue, 21 Jul 2015 19:28:23 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -125,6 +125,24 @@ gulp.task(&#39;haml-build&#39;, function () {
         <pubDate>Thu, 04 Jun 2015 00:00:00 +0100</pubDate>
         <link>https://rsmith.io/blog/jekyll_gulp_haml_sass_browsersync</link>
         <guid isPermaLink="true">https://rsmith.io/blog/jekyll_gulp_haml_sass_browsersync</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>RSS Reader Script</title>
+        <description>&lt;p&gt;I wanted a quick, lightweight way to browse and open articles from RSS feeds from within the terminal. I wrote a short
+&lt;a href=&quot;git@github.com:robinrob/rss-opener.git&quot;&gt;Ruby script&lt;/a&gt; for quickly opening RSS feed articles in a web browser.&lt;/p&gt;
+
+&lt;h2&gt;Screenshot&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/rss-opener.png&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Further details on its usage are given in the README file in the project.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 24 May 2015 00:00:00 +0100</pubDate>
+        <link>https://rsmith.io/blog/rss-feed-reader</link>
+        <guid isPermaLink="true">https://rsmith.io/blog/rss-feed-reader</guid>
         
         
       </item>
