@@ -6,9 +6,63 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 27 Aug 2015 00:11:14 +0100</pubDate>
-    <lastBuildDate>Thu, 27 Aug 2015 00:11:14 +0100</lastBuildDate>
+    <pubDate>Thu, 27 Aug 2015 00:12:43 +0100</pubDate>
+    <lastBuildDate>Thu, 27 Aug 2015 00:12:43 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Fast Javascript Variable Debugging</title>
+        <description>&lt;p&gt;Note: when debugging Javascript in the browser, it&amp;#39;s usually best to just use the Chrome dev tools for this!&lt;/p&gt;
+
+&lt;p&gt;Besides using a browser&amp;#39;s dev tools whilst debugging Javascript, you still may find yourself needing to quickly print
+the contents of an object out to the console. You may be writing a short Node script in a text editor for example.
+Printing out the contents of an object involves typing something like the following - for example to display the
+contents of the object referenced by variable &lt;code&gt;myVar&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;console.log(&#39;myVar: &#39; + JSON.stringify(myVar, null, &#39;\t&#39;))&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is a pretty unwieldy line and when debugging an unfamiliar piece of code you could waste a lot of time typing or even
+copy-pasting this and subsequently modifying it.&lt;/p&gt;
+
+&lt;p&gt;Since I use the command-line and my ZSH environment as a swiss-army knife in all that I do, I
+wrote a quick little shell function to do the work of constructing the above useful snippet:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;zsh&quot;&gt;function console_log_json () {
+    local +r Variable=$1
+    
+    copy_print &quot;console.log(&#39;$Variable: &#39; + JSON.stringify($Variable, null, &#39;\  &#39;))&quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Where &lt;code&gt;copy_print&lt;/code&gt; is the following shell function (requires &lt;code&gt;pbcopy&lt;/code&gt; and &lt;code&gt;pbpaste&lt;/code&gt; programs):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;zsh&quot;&gt;function copy_print () {
+    # printf is necessary here because print does not print a string containing only
+    # the character &#39;-&#39;, no matter how many times the string contains it.
+    printf $@ | pbcopy &amp;&amp; pbpaste
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The workflow goes like this:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;See a variable that you&amp;#39;d really like to check the contents of when you run your app, e.g. &lt;code&gt;myVar&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Switch focus to the terminal (I use a hot-key: cmd + caps-lock)&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;console_log_json&lt;/code&gt; (or alias of - i use &lt;code&gt;logj&lt;/code&gt; for example) then name of variable: &lt;code&gt;logj myVar&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Switch focus back to the editor and paste the snippet which should be in the clipboard: &lt;code&gt;console.log(&amp;#39;myvar: &amp;#39; + JSON.stringify(myvar, null, &amp;#39;\t&amp;#39;))&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This is pretty snappy when you need it! And can be made arbitrarily complex or &amp;#39;pretty&amp;#39; of course.&lt;/p&gt;
+
+&lt;p&gt;The point of this post is to demonstrate the fun of automating out repetetive actions that you may find yourself making,
+and the usefulness of the command-line plus shell environment in this.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 25 Aug 2015 00:00:00 +0100</pubDate>
+        <link>https://rsmith.io/blog/console-log-json-stringify</link>
+        <guid isPermaLink="true">https://rsmith.io/blog/console-log-json-stringify</guid>
+        
+        
+      </item>
     
       <item>
         <title>ConsoleWriter jQuery Plugin</title>
@@ -143,60 +197,6 @@ gulp.task(&#39;haml-build&#39;, function () {
         <pubDate>Sun, 24 May 2015 00:00:00 +0100</pubDate>
         <link>https://rsmith.io/blog/rss-feed-reader</link>
         <guid isPermaLink="true">https://rsmith.io/blog/rss-feed-reader</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Fast Javascript Variable Debugging</title>
-        <description>&lt;p&gt;Note: when debugging Javascript in the browser, it&amp;#39;s usually best to just use the Chrome dev tools for this!&lt;/p&gt;
-
-&lt;p&gt;Besides using a browser&amp;#39;s dev tools whilst debugging Javascript, you still may find yourself needing to quickly print
-the contents of an object out to the console. You may be writing a short Node script in a text editor for example.
-Printing out the contents of an object involves typing something like the following - for example to display the
-contents of the object referenced by variable &lt;code&gt;myVar&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;console.log(&#39;myVar: &#39; + JSON.stringify(myVar, null, &#39;\t&#39;))&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is a pretty unwieldy line and when debugging an unfamiliar piece of code you could waste a lot of time typing or even
-copy-pasting this and subsequently modifying it.&lt;/p&gt;
-
-&lt;p&gt;Since I use the command-line and my ZSH environment as a swiss-army knife in all that I do, I
-wrote a quick little shell function to do the work of constructing the above useful snippet:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;zsh&quot;&gt;function console_log_json () {
-    local +r Variable=$1
-    
-    copy_print &quot;console.log(&#39;$Variable: &#39; + JSON.stringify($Variable, null, &#39;\  &#39;))&quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Where &lt;code&gt;copy_print&lt;/code&gt; is the following shell function (requires &lt;code&gt;pbcopy&lt;/code&gt; and &lt;code&gt;pbpaste&lt;/code&gt; programs):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;zsh&quot;&gt;function copy_print () {
-    # printf is necessary here because print does not print a string containing only
-    # the character &#39;-&#39;, no matter how many times the string contains it.
-    printf $@ | pbcopy &amp;&amp; pbpaste
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The workflow goes like this:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;See a variable that you&amp;#39;d really like to check the contents of when you run your app, e.g. &lt;code&gt;myVar&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Switch focus to the terminal (I use a hot-key: cmd + caps-lock)&lt;/li&gt;
-&lt;li&gt;Type &lt;code&gt;console_log_json&lt;/code&gt; (or alias of - i use &lt;code&gt;logj&lt;/code&gt; for example) then name of variable: &lt;code&gt;logj myVar&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Switch focus back to the editor and paste the snippet which should be in the clipboard: &lt;code&gt;console.log(&amp;#39;myvar: &amp;#39; + JSON.stringify(myvar, null, &amp;#39;\t&amp;#39;))&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;This is pretty snappy when you need it! And can be made arbitrarily complex or &amp;#39;pretty&amp;#39; of course.&lt;/p&gt;
-
-&lt;p&gt;The point of this post is to demonstrate the fun of automating out repetetive actions that you may find yourself making,
-and the usefulness of the command-line plus shell environment in this.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 24 May 2015 00:00:00 +0100</pubDate>
-        <link>https://rsmith.io/blog/console-log-json-stringify</link>
-        <guid isPermaLink="true">https://rsmith.io/blog/console-log-json-stringify</guid>
         
         
       </item>
