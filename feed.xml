@@ -6,8 +6,8 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 28 Aug 2015 16:14:13 +0100</pubDate>
-    <lastBuildDate>Fri, 28 Aug 2015 16:14:13 +0100</lastBuildDate>
+    <pubDate>Fri, 28 Aug 2015 16:17:00 +0100</pubDate>
+    <lastBuildDate>Fri, 28 Aug 2015 16:17:00 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -106,7 +106,7 @@ many rules to learn in order to become useful with them.&lt;/p&gt;
 &lt;p&gt;Build your own personal library of regular expressions, and paste them into your code where needed. Mastery of this
 elegant approach to this type of programming problem is one way to stand out from the crowd.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 25 Aug 2015 00:00:00 +0100</pubDate>
+        <pubDate>Sat, 29 Aug 2015 00:00:00 +0100</pubDate>
         <link>https://rsmith.io/blog/learn-regex-or-regret-it</link>
         <guid isPermaLink="true">https://rsmith.io/blog/learn-regex-or-regret-it</guid>
         
