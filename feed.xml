@@ -6,8 +6,8 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 15 Sep 2015 18:12:35 +0100</pubDate>
-    <lastBuildDate>Tue, 15 Sep 2015 18:12:35 +0100</lastBuildDate>
+    <pubDate>Tue, 15 Sep 2015 18:18:27 +0100</pubDate>
+    <lastBuildDate>Tue, 15 Sep 2015 18:18:27 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -289,7 +289,7 @@ gulp.task(&#39;haml-build&#39;, function () {
       <item>
         <title>RSS Reader Script</title>
         <description>&lt;p&gt;I wanted a quick, lightweight way to browse and open articles from RSS feeds from within the terminal. I wrote a short
-&lt;a href=&quot;git@github.com:robinrob/rss-opener.git&quot;&gt;Ruby script&lt;/a&gt; for quickly opening RSS feed articles in a web browser.&lt;/p&gt;
+&lt;a href=&quot;https://github.com/robinrob/rss-opener.git&quot;&gt;Ruby script&lt;/a&gt; for quickly opening RSS feed articles in a web browser.&lt;/p&gt;
 
 &lt;h2&gt;Screenshot&lt;/h2&gt;
 
