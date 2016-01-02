@@ -6,8 +6,8 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 02 Jan 2016 22:48:18 +0000</pubDate>
-    <lastBuildDate>Sat, 02 Jan 2016 22:48:18 +0000</lastBuildDate>
+    <pubDate>Sat, 02 Jan 2016 22:51:05 +0000</pubDate>
+    <lastBuildDate>Sat, 02 Jan 2016 22:51:05 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -57,6 +57,7 @@ try:
 
 except Exception as e:
     print &#39;Invalid address&#39;
+    
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;An equivalent script using a regex method might go like this:&lt;/p&gt;
