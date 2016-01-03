@@ -6,8 +6,8 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 02 Jan 2016 22:51:05 +0000</pubDate>
-    <lastBuildDate>Sat, 02 Jan 2016 22:51:05 +0000</lastBuildDate>
+    <pubDate>Sun, 03 Jan 2016 13:23:07 +0000</pubDate>
+    <lastBuildDate>Sun, 03 Jan 2016 13:23:07 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -19,7 +19,7 @@ problems that require ever-more creative ways of using the root principles to so
 above viewpoint is the way in which I came to view this learning process. Learning how to use regular expressions is an exercise of
 applying the known rules of the game to situations that require your creativity, logical thinking and intuition to solve.&lt;/p&gt;
 
-&lt;p&gt;With all things that are difficult to do well, if you can make the process of mastering them into a game you will perform
+&lt;p&gt;With all things that are difficult to do well, if you can make the process of mastering it into a game you will perform
 much better. The task of solving regex problems is a &lt;em&gt;perfect&lt;/em&gt; candidate for game-making!&lt;/p&gt;
 
 &lt;p&gt;If you only reach this stage in your appreciation of regular expressions then you may already find great value in them. But they
@@ -31,7 +31,7 @@ Regular expressions have been around for decades and have changed little in thei
 
 &lt;p&gt;More important than any of the above great reasons for learning how to use regular expressions, the fact remains that they
 are an incredibly powerful and efficient way of solving certain types of text-reading and text-manipulation problems.
-To take a (very simplified) example that is well-suited to the application of a regex solution: let&amp;#39;s say that you want
+To take a (simplified) example that is well-suited to the application of a regex solution: let&amp;#39;s say that you want
 to read in some user input to specify the first line of an address, which must be a number followed by alphabetical
 strings of characters, e.g. &amp;#39;41 Princes Street&amp;#39;. Furthermore, each alphabetical string must have its initial
 character capitalised. So &amp;#39;41 123 Princes Street&amp;#39; would be invalid, as would &amp;#39;41 princes Street&amp;#39; or &amp;#39;41 Princes123 Street&amp;#39;. &lt;/p&gt;
@@ -79,19 +79,24 @@ else:
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The regular expression says: match a string with the following properties:
-- begins with a string of one mor more digits
-- the initial string of digits is followed by a space character, then one or more of: (alphabetical string with capitalised initial character, optionally followed by a space character)
-- the string ends on the last of the occurrence of (alphabetical string with capitalised initial character, optionally followed by a space character)&lt;/p&gt;
+&lt;p&gt;The regular expression says: match a string with the following properties:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Begins with a string of one more more digits&lt;/li&gt;
+&lt;li&gt;The initial string of digits is followed by a space character, then one or more of: (alphabetical string with capitalised initial character, optionally followed by a space character)&lt;/li&gt;
+&lt;li&gt;The string ends on the last of the occurrence of (alphabetical string with capitalised initial character, optionally followed by a space character)&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;For this particular example with the given constraints on the format of the address I would prefer the regular expression
 solution, as it expresses very concisely the conditions being imposed for validity of the input. For me it is a lot
-easier to write and to read and therefore easier to get right and to not make mistakes.&lt;/p&gt;
+easier to write and to read and therefore easier to get right and to not make mistakes. It also utilises a neat aspect
+of regular expressions: recursive matching of a sub-expression (the alphabetical strings following the number in the address
+line).&lt;/p&gt;
 
 &lt;p&gt;Not every instance of any given type of problem is best solved using any particular tool, and this is true with regular 
 expressions. A judgement must be made based on many factors and constraints on which is the best method to use to solve the problem,
-where &amp;#39;best&amp;#39; is defined by a lot of factors. Regular expressions are just one additional tool that you have
-available for consideration when making this decision.&lt;/p&gt;
+where &amp;#39;best&amp;#39; is defined by a lot of factors specific to the problem and the environment and circumstances in which it is being solved.
+Regular expressions are just one additional tool that you have available for consideration when making this decision.&lt;/p&gt;
 
 &lt;p&gt;The reason why I think that it would be regretful not to learn how to use regular expressions, is that since making the
 effort to learn how to use this tool, I have personally encountered many situations where they have been a priceless tool, saving
@@ -106,55 +111,78 @@ not often that such a simple, short string of characters can give such power.&lt
       </item>
     
       <item>
-        <title>Fast Javascript Variable Debugging</title>
-        <description>&lt;p&gt;Note: when debugging Javascript in the browser, it&amp;#39;s usually best to just use the Chrome dev tools for this!&lt;/p&gt;
+        <title>Faster Variable Debugging</title>
+        <description>&lt;p&gt;Almost inevitably whilst debugging code, regardless of any additional tools that you may have available (e.g.
+browser development tools when debugging front-end code), it can be desirable to quickly print the contents of a
+variable to the program output. Maybe you don&amp;#39;t have the time to learn how to use a more comprehensive tool in that moment,
+or doing so would actually take more time. You can find yourself repetitively typing the same mundane set of characters
+out that results in printing something in the language that you happen to be using.&lt;/p&gt;
 
-&lt;p&gt;Besides using a browser&amp;#39;s dev tools whilst debugging Javascript, you still may find yourself needing to quickly print
-the contents of an object out to the console. You may be writing a short Node script in a text editor for example.
-Printing out the contents of an object involves typing something like the following - for example to display the
-contents of the object referenced by variable &lt;code&gt;myVar&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;I use my terminal extensively for little time-saving pieces of automation, that over the course of a day can have a big
+impact on your efficiency. One example is a set of short commands for printing things out in various languages:&lt;/p&gt;
+
+&lt;h2&gt;Javascript&lt;/h2&gt;
+
+&lt;h3&gt;&lt;code&gt;js_log&lt;/code&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;copy_print &quot;console.log(&#39;$(upper $*)&#39;)&quot;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;&lt;code&gt;copy_print&lt;/code&gt; (ZSH function)&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;zsh&quot;&gt;copy_print () {
+    printf $@ | pbcopy &amp;&amp; pbpaste
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;&lt;code&gt;upper&lt;/code&gt; (ZSH function)&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;zsh&quot;&gt;upper () {
+    print $@:u
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;&lt;code&gt;js_log_object&lt;/code&gt;&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;console.log(&#39;myVar: &#39; + JSON.stringify(myVar, null, &#39;\t&#39;))&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;This is a pretty unwieldy line and when debugging an unfamiliar piece of code you could waste a lot of time typing or even
-copy-pasting this and subsequently modifying it.&lt;/p&gt;
+&lt;h2&gt;Python&lt;/h2&gt;
 
-&lt;p&gt;Since I use the command-line and my ZSH environment as a swiss-army knife in all that I do, I
-wrote a quick little shell function to do the work of constructing the above useful snippet:&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;python_log&lt;/code&gt;&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code class=&quot;zsh&quot;&gt;function console_log_json () {
-    local +r Variable=$1
-    
-    copy_print &quot;console.log(&#39;$Variable: &#39; + JSON.stringify($Variable, null, &#39;\  &#39;))&quot;
-}
+&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;python_log () {
+    copy_print &quot;print &#39;$(upper $*)&#39;&quot;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;&lt;code&gt;python_log_var&lt;/code&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;python_log_var () {
+    copy_print &quot;print &#39;$1: {var}&#39;.format(var=$1)&quot;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;&lt;code&gt;python_log_object&lt;/code&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;python_log_object () {
+    copy_print &quot;import simplejson as simplejson; print &#39;$1: {json}&#39;.format(json=simplejson.dumps($1, indent=4))&quot;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You get the idea. Usage is simple, like this (after hot-keying to your terminal window and here using an alias &lt;code&gt;logpo&lt;/code&gt; for &lt;code&gt;log_python_object&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;zsh&quot;&gt;⚡ logpo my_var
+import simplejson as simplejson; print &#39;my_var: {json}&#39;.format(json=simplejson.dumps(my_var, indent=4))%
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Where &lt;code&gt;copy_print&lt;/code&gt; is the following shell function (requires &lt;code&gt;pbcopy&lt;/code&gt; and &lt;code&gt;pbpaste&lt;/code&gt; programs):&lt;/p&gt;
+&lt;p&gt;The above printed snippet is then in the clipboard and you can just paste it into the code where you want it, which of course
+prints when run:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;zsh&quot;&gt;function copy_print () {
-    # printf is necessary here because print does not print a string containing only
-    # the character &#39;-&#39;, no matter how many times the string contains it.
-    printf $@ | pbcopy &amp;&amp; pbpaste
-}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;my_var: {
+    &quot;age&quot;: 28,
+    &quot;name&quot;: &quot;Robin&quot;
+}&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The workflow goes like this:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;See a variable that you&amp;#39;d really like to check the contents of when you run your app, e.g. &lt;code&gt;myVar&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Switch focus to the terminal (I use a hot-key: cmd + caps-lock)&lt;/li&gt;
-&lt;li&gt;Type &lt;code&gt;console_log_json&lt;/code&gt; (or alias of - i use &lt;code&gt;logj&lt;/code&gt; for example) then name of variable: &lt;code&gt;logj myVar&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Switch focus back to the editor and paste the snippet which should be in the clipboard: &lt;code&gt;console.log(&amp;#39;myvar: &amp;#39; + JSON.stringify(myvar, null, &amp;#39;\t&amp;#39;))&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;This is pretty snappy when you need it! And can be made arbitrarily complex or &amp;#39;pretty&amp;#39; of course.&lt;/p&gt;
-
-&lt;p&gt;The point of this post is to demonstrate the fun of automating out repetetive actions that you may find yourself making,
-and the usefulness of the command-line plus shell environment in this.&lt;/p&gt;
+&lt;p&gt;There is fun in automating out repetitive actions that really bring down your day. It&amp;#39;s also a handy way to learn ZSH
+and discover command-line tools.&lt;/p&gt;
 </description>
         <pubDate>Tue, 25 Aug 2015 00:00:00 +0100</pubDate>
-        <link>https://rsmith.io/blog/console-log-json-stringify</link>
-        <guid isPermaLink="true">https://rsmith.io/blog/console-log-json-stringify</guid>
+        <link>https://rsmith.io/blog/faster-variable-debugging</link>
+        <guid isPermaLink="true">https://rsmith.io/blog/faster-variable-debugging</guid>
         
         
       </item>
