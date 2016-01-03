@@ -6,8 +6,8 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 03 Jan 2016 13:38:02 +0000</pubDate>
-    <lastBuildDate>Sun, 03 Jan 2016 13:38:02 +0000</lastBuildDate>
+    <pubDate>Sun, 03 Jan 2016 17:05:07 +0000</pubDate>
+    <lastBuildDate>Sun, 03 Jan 2016 17:05:07 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -254,7 +254,7 @@ example usages.&lt;/p&gt;
         <title>Jekyll Gulp HAML SASS BrowserSync</title>
         <description>&lt;p&gt;Whilst using Github&amp;#39;s Jekyll framework to build a static website, I noticed a lack of built-in HAML support. I am a big fan of using HAML to produce HTML. Apart from this lack of support for HAML, I enjoy using Jekyll.&lt;/p&gt;
 
-&lt;p&gt;Since I was using Gulp to manage the build process, I needed a Gulp task to handle the HAML preprocessing. I initially tried using the &lt;a href=&quot;https://www.npmjs.com/package/gulp-haml&quot;&gt;gulp-haml&lt;/a&gt; module in my HAML task, but it produced incorrect results a few times. I came across the node module &lt;a href=&quot;https://github.com/moneypenny/gulp-ruby-haml&quot;&gt;gulp-ruby-haml&lt;/a&gt;, which is a wrapper on the Ruby gem &lt;a href=&quot;https://rubygems.org/gems/haml&quot;&gt;haml&lt;/a&gt;, and which gives accurate results.&lt;/p&gt;
+&lt;p&gt;Since I was using Gulp to manage the build process, I needed a Gulp task to handle the HAML preprocessing. I initially tried using the &lt;a href=&quot;https://www.npmjs.com/package/gulp-haml&quot;&gt;&lt;span&gt;Gulp-Haml NPM package&lt;/span&gt;gulp-haml&lt;/a&gt; module in my HAML task, but it produced incorrect results a few times. I came across the node module &lt;a href=&quot;https://github.com/moneypenny/gulp-ruby-haml&quot;&gt;&lt;span&gt;Gulp-Ruby-Haml NPM package&lt;/span&gt;gulp-ruby-haml&lt;/a&gt;, which is a wrapper on the Ruby gem &lt;a href=&quot;https://rubygems.org/gems/haml&quot;&gt;&lt;span&gt;HAML ruby package&lt;/span&gt;haml&lt;/a&gt;, and which gives accurate results.&lt;/p&gt;
 
 &lt;h2 class=&quot;section-heading&quot;&gt;HAML Processing&lt;/h2&gt;
 
@@ -276,7 +276,7 @@ example usages.&lt;/p&gt;
 
 &lt;p&gt;The HAML build task is actually fairly slow compared to the CSS or Javascript processing tasks. It can take up to 10 seconds to process all of the HAML in the project. This is unacceptable when rebuilding on-the-fly while making changes.&lt;/p&gt;
 
-&lt;p&gt;To avoid slow build times, I use a separate &lt;code&gt;haml-watch&lt;/code&gt; task that watches the HAML files for changes, then only processes the files that changed. The stream is then piped into the code for compiling the HAML, which is contained in the function &lt;code&gt;hamlBuild()&lt;/code&gt;. This stream-piping step makes use of &lt;a href=&quot;https://www.npmjs.com/package/stream-combiner2&quot;&gt;stream-combiner2&lt;/a&gt;. Below is the code for both HAML tasks:&lt;/p&gt;
+&lt;p&gt;To avoid slow build times, I use a separate &lt;code&gt;haml-watch&lt;/code&gt; task that watches the HAML files for changes, then only processes the files that changed. The stream is then piped into the code for compiling the HAML, which is contained in the function &lt;code&gt;hamlBuild()&lt;/code&gt;. This stream-piping step makes use of &lt;a href=&quot;https://www.npmjs.com/package/stream-combiner2&quot;&gt;&lt;span&gt;Stream Combiner 2 NPM package&lt;/span&gt;stream-combiner2&lt;/a&gt;. Below is the code for both HAML tasks:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;var haml = require(&#39;gulp-ruby-haml&#39;)
 var combiner = require(&#39;stream-combiner2&#39;)
@@ -326,7 +326,7 @@ gulp.task(&#39;haml-build&#39;, function () {
 
 &lt;h2 class=&quot;section-heading&quot;&gt;Full Site Template&lt;/h2&gt;
 
-&lt;p&gt;Whilst researching Jekyll, I noticed a few other people sharing their Jekyll setups as site templates. Here is my own &lt;a href=&quot;https://github.com/robinrob/jekyll-gulp-haml-sass-browsersync.git&quot;&gt;jekyll-gulp-haml-sass-browsersync&lt;/a&gt; template which includes my full &lt;a href=&quot;https://github.com/robinrob/jekyll-gulp-haml-sass-browsersync/blob/master/gulpfile.js&quot;&gt;Gulpfile&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Whilst researching Jekyll, I noticed a few other people sharing their Jekyll setups as site templates. Here is my own &lt;a href=&quot;https://github.com/robinrob/jekyll-gulp-haml-sass-browsersync.git&quot;&gt;&lt;span&gt;Source repository for Jekyll-Gulp-Haml-Sass-Browsersync project&lt;/span&gt;jekyll-gulp-haml-sass-browsersync&lt;/a&gt; template which includes my full &lt;a href=&quot;https://github.com/robinrob/jekyll-gulp-haml-sass-browsersync/blob/master/gulpfile.js&quot;&gt;&lt;span&gt;Gulpfile for Jekyll-Gulp-Haml-Sass-Browsersync project on source repository page&lt;/span&gt;Gulpfile&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Thu, 04 Jun 2015 00:00:00 +0100</pubDate>
         <link>https://rsmith.io/blog/jekyll-gulp-haml-sass-browsersync</link>
@@ -338,11 +338,11 @@ gulp.task(&#39;haml-build&#39;, function () {
       <item>
         <title>RSS Reader Script</title>
         <description>&lt;p&gt;I wanted a quick, lightweight way to browse and open articles from RSS feeds from within the terminal. I wrote a short
-&lt;a href=&quot;https://github.com/robinrob/rss-opener.git&quot;&gt;Ruby script&lt;/a&gt; for quickly opening RSS feed articles in a web browser.&lt;/p&gt;
+&lt;a href=&quot;https://github.com/robinrob/rss-opener.git&quot;&gt;&lt;span&gt;Source code repository for RSS Reader Script project&lt;/span&gt;&lt;/a&gt; for quickly opening RSS feed articles in a web browser.&lt;/p&gt;
 
 &lt;h2&gt;Screenshot&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/rss-opener.png&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/rss-opener.png&quot; alt=&quot;RSS Reader Usage Screenshot&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;Further details on its usage are given in the README file in the project.&lt;/p&gt;
 </description>
