@@ -4,10 +4,10 @@
     <title>Robin Smith - Freelance Web Developer</title>
     <description>Experienced full-stack web developer building custom web applications and integrations using the best frameworks and cloud technologies.
 </description>
-    <link>https://www.rsmith.io/</link>
-    <atom:link href="https://www.rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 13 Jan 2016 18:20:56 +0000</pubDate>
-    <lastBuildDate>Wed, 13 Jan 2016 18:20:56 +0000</lastBuildDate>
+    <link>https://rsmith.io/</link>
+    <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 13 Jan 2016 18:25:41 +0000</pubDate>
+    <lastBuildDate>Wed, 13 Jan 2016 18:25:41 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -33,8 +33,8 @@ significant expenditure of your time to find good solutions. I do not want that 
 the process in future.&lt;/p&gt;
 </description>
         <pubDate>Fri, 30 Oct 2015 00:00:00 +0000</pubDate>
-        <link>https://www.rsmith.io/blog/personal-code-library</link>
-        <guid isPermaLink="true">https://www.rsmith.io/blog/personal-code-library</guid>
+        <link>https://rsmith.io/blog/personal-code-library</link>
+        <guid isPermaLink="true">https://rsmith.io/blog/personal-code-library</guid>
         
         
       </item>
@@ -133,8 +133,8 @@ me time and frustration, and giving a feeling of satisfaction when the correct r
 not often that such a simple, short string of characters can give such power.&lt;/p&gt;
 </description>
         <pubDate>Sat, 29 Aug 2015 00:00:00 +0100</pubDate>
-        <link>https://www.rsmith.io/blog/learn-regex-or-regret-it</link>
-        <guid isPermaLink="true">https://www.rsmith.io/blog/learn-regex-or-regret-it</guid>
+        <link>https://rsmith.io/blog/learn-regex-or-regret-it</link>
+        <guid isPermaLink="true">https://rsmith.io/blog/learn-regex-or-regret-it</guid>
         
         
       </item>
@@ -210,8 +210,8 @@ prints when run:&lt;/p&gt;
 and discover command-line tools.&lt;/p&gt;
 </description>
         <pubDate>Tue, 25 Aug 2015 00:00:00 +0100</pubDate>
-        <link>https://www.rsmith.io/blog/faster-variable-debugging</link>
-        <guid isPermaLink="true">https://www.rsmith.io/blog/faster-variable-debugging</guid>
+        <link>https://rsmith.io/blog/faster-variable-debugging</link>
+        <guid isPermaLink="true">https://rsmith.io/blog/faster-variable-debugging</guid>
         
         
       </item>
@@ -244,8 +244,8 @@ file included in the repo describes the options and how to set them. There is al
 example usages.&lt;/p&gt;
 </description>
         <pubDate>Wed, 01 Jul 2015 00:00:00 +0100</pubDate>
-        <link>https://www.rsmith.io/blog/console-writer-jquery-plugin</link>
-        <guid isPermaLink="true">https://www.rsmith.io/blog/console-writer-jquery-plugin</guid>
+        <link>https://rsmith.io/blog/console-writer-jquery-plugin</link>
+        <guid isPermaLink="true">https://rsmith.io/blog/console-writer-jquery-plugin</guid>
         
         
       </item>
@@ -329,8 +329,8 @@ gulp.task(&#39;haml-build&#39;, function () {
 &lt;p&gt;Whilst researching Jekyll, I noticed a few other people sharing their Jekyll setups as site templates. Here is my own &lt;a href=&quot;https://github.com/robinrob/jekyll-gulp-haml-sass-browsersync.git&quot;&gt;&lt;span&gt;Source repository for Jekyll-Gulp-Haml-Sass-Browsersync project&lt;/span&gt;jekyll-gulp-haml-sass-browsersync&lt;/a&gt; template which includes my full &lt;a href=&quot;https://github.com/robinrob/jekyll-gulp-haml-sass-browsersync/blob/master/gulpfile.js&quot;&gt;&lt;span&gt;Gulpfile for Jekyll-Gulp-Haml-Sass-Browsersync project on source repository page&lt;/span&gt;Gulpfile&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Thu, 04 Jun 2015 00:00:00 +0100</pubDate>
-        <link>https://www.rsmith.io/blog/jekyll-gulp-haml-sass-browsersync</link>
-        <guid isPermaLink="true">https://www.rsmith.io/blog/jekyll-gulp-haml-sass-browsersync</guid>
+        <link>https://rsmith.io/blog/jekyll-gulp-haml-sass-browsersync</link>
+        <guid isPermaLink="true">https://rsmith.io/blog/jekyll-gulp-haml-sass-browsersync</guid>
         
         
       </item>
@@ -347,8 +347,8 @@ gulp.task(&#39;haml-build&#39;, function () {
 &lt;p&gt;Further details on its usage are given in the README file in the project.&lt;/p&gt;
 </description>
         <pubDate>Sun, 24 May 2015 00:00:00 +0100</pubDate>
-        <link>https://www.rsmith.io/blog/rss-feed-reader</link>
-        <guid isPermaLink="true">https://www.rsmith.io/blog/rss-feed-reader</guid>
+        <link>https://rsmith.io/blog/rss-feed-reader</link>
+        <guid isPermaLink="true">https://rsmith.io/blog/rss-feed-reader</guid>
         
         
       </item>
