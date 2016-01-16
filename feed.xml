@@ -6,8 +6,8 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 16 Jan 2016 14:30:02 +0000</pubDate>
-    <lastBuildDate>Sat, 16 Jan 2016 14:30:02 +0000</lastBuildDate>
+    <pubDate>Sat, 16 Jan 2016 16:42:09 +0000</pubDate>
+    <lastBuildDate>Sat, 16 Jan 2016 16:42:09 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -228,17 +228,23 @@ as in &lt;a href=&quot;http://www.mattboldt.com/demos/typed-js/&quot;&gt;Typed.j
 world or software world, it is fair to say that this idea has been done before.&lt;/p&gt;
 
 &lt;p&gt;My main motivation for the project was to gain familiarity with using jQuery and I believe that embarking on a pet
-project is the best, most fun and most productive way to learn a new programming language or framework. &lt;/p&gt;
+project is the most fun and productive way to learn a new programming language or tool. &lt;/p&gt;
 
-&lt;p&gt;The main objective I wanted to achieve was actually to allow the site visitor to modify the heading element by focusing it,
+&lt;p&gt;The main feature that I wanted to implemented with the project was to allow the site visitor to modify the heading element by focusing it,
 deleting existing characters and typing whatever they wanted into the element, complete with a blinking cursor at the end
-of the line as in a terminal. I also added keyboard typing sounds to heighten the effect. Try it now by clicking any of
+of the line, as if they were typing on a command line. I added keyboard typing sounds to try to heighten the effect. Try it now by clicking any of
 the headings within this blog article.&lt;/p&gt;
 
 &lt;h2 class=&quot;console-writer&quot; cw-typing-sound=&quot;true&quot;&gt;ConsoleWriter&lt;/h2&gt;
 
-&lt;p&gt;I packaged the project up as a jQuery plugin: &lt;a href=&quot;https://github.com/robinrob/consolewriter.jquery.js&quot;&gt;ConsoleWriter&lt;/a&gt;,
-designed with a focus on user-friendliness and configurability using options. The heading above this paragraph displays the default method of usage which requires
+&lt;p&gt;I packaged the project up as a jQuery plugin: &lt;a href=&quot;https://github.com/robinrob/console-writer.git&quot;&gt;ConsoleWriter&lt;/a&gt;,
+designed with a focus on user-friendliness and configurability using options.&lt;/p&gt;
+
+&lt;p&gt;The project can be installed through Bower using the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;bower install console-writer&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The heading above this paragraph displays the default method of usage which requires
 just adding the &lt;code&gt;console-writer&lt;/code&gt; class to the element. Reload the page again to see the typewriter effect. The &lt;code&gt;readme&lt;/code&gt;
 file included in the repo describes the options and how to set them. There is also a &lt;code&gt;demo.html&lt;/code&gt; file which shows
 example usages.&lt;/p&gt;
