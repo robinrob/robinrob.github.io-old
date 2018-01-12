@@ -6,13 +6,17 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 12 Jan 2018 15:49:26 +0000</pubDate>
-    <lastBuildDate>Fri, 12 Jan 2018 15:49:26 +0000</lastBuildDate>
+    <pubDate>Fri, 12 Jan 2018 16:01:13 +0000</pubDate>
+    <lastBuildDate>Fri, 12 Jan 2018 16:01:13 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>Going Freelance</title>
         <description>&lt;h2&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;I recently gave a talk &lt;a href=&quot;https://youtu.be/bdfuv9c3WLM?t=2589&quot;&gt;talk&lt;/a&gt; on going freelance at a &lt;a href=&quot;http://techmeetup.co.uk/&quot;&gt;TechMeetup&lt;/a&gt; event in Edinburgh.
+The process of preparing for the talk really got me thinking about my experiences, and I will summarise some of the
+things I spoke about here.&lt;/p&gt;
 
 &lt;p&gt;Shortly after I began my first full-time job as a web developer, I began hearing about freelancers through general conversation.
 The comments associated with them were usually something about their high pay relative to equivalent full-time employed
