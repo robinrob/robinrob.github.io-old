@@ -6,9 +6,44 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 12 Jan 2018 21:54:58 +0000</pubDate>
-    <lastBuildDate>Fri, 12 Jan 2018 21:54:58 +0000</lastBuildDate>
+    <pubDate>Sun, 14 Jan 2018 21:51:03 +0000</pubDate>
+    <lastBuildDate>Sun, 14 Jan 2018 21:51:03 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Python 3.6 string interpolation</title>
+        <description>&lt;p&gt;I learned about this around six months ago, and since then I&amp;#39;ve barely used it because I hadn&amp;#39;t used it enough to
+remember the syntax. And since it&amp;#39;s recent, Googling for it wasn&amp;#39;t returning anything either - since I hadn&amp;#39;t realised it was
+unique to versions 3.6 onwards, I wasn&amp;#39;t looking in the correct documentation versions.&lt;/p&gt;
+
+&lt;p&gt;Essentially Python 3.6 introduces a new form of string interpolation that is similar to the way one can embed variables
+into strings in Ruby:
+&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;msg = &amp;quot;Hello at last!&amp;quot;
+puts &amp;quot;#{msg}&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;Same example in Python 3.6:
+&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;msg = &amp;quot;Hello at last!&amp;quot;
+print(f&amp;quot;{msg}&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;Output:
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&amp;gt;&amp;gt; Hello at last!
+&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;Which I find to be a lot nicer than:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&quot;{msg}&quot;.format(msg=msg)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In most situations.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 Jan 2018 00:00:00 +0000</pubDate>
+        <link>https://rsmith.io/blog/python-3-6-string-interpolation</link>
+        <guid isPermaLink="true">https://rsmith.io/blog/python-3-6-string-interpolation</guid>
+        
+        
+      </item>
     
       <item>
         <title>Going Freelance</title>
@@ -415,19 +450,19 @@ example usages.&lt;/p&gt;
 &lt;h2 class=&quot;section-heading&quot;&gt;HAML Processing&lt;/h2&gt;
 
 &lt;p&gt;HAML files reside inside a &lt;code&gt;_haml&lt;/code&gt; folder which sits at the location of the resultant HTML files. For example:
-&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;project-root
-        index
-                _haml
-                        index.haml
-                index.html
-        _includes
-                _haml
-                        footer.haml
-                        head.haml
-                        nav.haml
-                footer.html
-                head.html
-                nav.html
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;project-root/
+    index/
+        _haml/
+                index.haml
+        index.html
+    _includes/
+        _haml/
+            footer.haml
+            head.haml
+            nav.haml
+        footer.html
+        head.html
+        nav.html
 &lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
 
 &lt;p&gt;The HAML build task is actually fairly slow compared to the CSS or Javascript processing tasks. It can take up to 10 seconds to process all of the HAML in the project. This is unacceptable when rebuilding on-the-fly while making changes.&lt;/p&gt;
