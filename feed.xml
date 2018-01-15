@@ -6,8 +6,8 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 15 Jan 2018 12:47:41 +0000</pubDate>
-    <lastBuildDate>Mon, 15 Jan 2018 12:47:41 +0000</lastBuildDate>
+    <pubDate>Mon, 15 Jan 2018 12:51:43 +0000</pubDate>
+    <lastBuildDate>Mon, 15 Jan 2018 12:51:43 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -43,7 +43,7 @@ of this brutally-menial work amounts to a huge time-saving.&lt;/p&gt;
 to save me a lot of overall development time upfront, &lt;a href=&quot;https://english.stackexchange.com/questions/12752/what-is-the-difference-between-nevermind-and-never-mind&quot;&gt;never mind&lt;/a&gt;
 on-going maintenance time. Automating testing is a natural programmer&amp;#39;s instinct.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;They increase reliability&lt;/strong&gt;. Automated tests are &lt;em&gt;automated&lt;/em&gt;, so they always do their job properly.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;They help you to understand the code&lt;/strong&gt;. Whenever I need to remind myself what a particular piece of code does, or are
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;They help you to understand the code&lt;/strong&gt;. Whenever I need to remind myself what a particular piece of code does, or am
 learning it for the first time, I always find reading the tests to be extremely helpful.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;They make refactoring much much easier&lt;/strong&gt;. I can&amp;#39;t imagine having to refactor complex code that doesn&amp;#39;t have tests, as
 I&amp;#39;ve never done it nor had to.&lt;/p&gt;&lt;/li&gt;
