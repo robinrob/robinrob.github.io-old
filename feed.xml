@@ -6,8 +6,8 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 29 Jan 2018 15:31:26 +0000</pubDate>
-    <lastBuildDate>Mon, 29 Jan 2018 15:31:26 +0000</lastBuildDate>
+    <pubDate>Mon, 29 Jan 2018 15:34:38 +0000</pubDate>
+    <lastBuildDate>Mon, 29 Jan 2018 15:34:38 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -17,8 +17,8 @@ personal stuff. I say &amp;#39;programmers&amp;#39;, because this will surely ap
 as two disciplines for which people use programming languages and into which I think people often fall as a result programming
 as a hobby.&lt;/p&gt;
 
-&lt;p&gt;Whilst trying to get something done in your own time, it can be tempting to think &amp;#39;&lt;strong&gt;what if I automated
-this?&lt;/strong&gt;&amp;#39;. It may feel like a procrastination tool, and maybe it leads you down a rabbit hole of stolen time with no
+&lt;p&gt;Whilst trying to get something done in your own time, it can be tempting to think &amp;#39;&lt;em&gt;what if I automated
+this?&lt;/em&gt;&amp;#39;. It may feel like a procrastination tool, and maybe it leads you down a rabbit hole of stolen time with no
 useful result. Or you automate a task and only ever do it once, finding that perfect, one-use-only regex - there&amp;#39;s that
 old adage about programmers.&lt;/p&gt;
 
