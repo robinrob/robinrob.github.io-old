@@ -6,15 +6,16 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 29 Jan 2018 15:29:01 +0000</pubDate>
-    <lastBuildDate>Mon, 29 Jan 2018 15:29:01 +0000</lastBuildDate>
+    <pubDate>Mon, 29 Jan 2018 15:29:43 +0000</pubDate>
+    <lastBuildDate>Mon, 29 Jan 2018 15:29:43 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
         <title>Personal automation as code practice</title>
         <description>&lt;p&gt;Perhaps one natural tendency of programmers is to want to automate too many things, especially when it comes to their
 personal stuff. I say &amp;#39;programmers&amp;#39;, because this will surely apply to at least both software developers and DevOps engineers,
-as two disciplines for which people use programming languages and into which I think people often fall as a result programming for a hobby.&lt;/p&gt;
+as two disciplines for which people use programming languages and into which I think people often fall as a result programming
+as a hobby.&lt;/p&gt;
 
 &lt;p&gt;Whilst trying to get something done, and in your own time, it can be tempting to think &amp;#39;what if I automated
 this?&amp;#39;. It may feel like a procrastination tool, and maybe it leads you down a rabbit hole of stolen time with no
