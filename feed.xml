@@ -6,9 +6,53 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 25 Jan 2018 18:43:37 +0000</pubDate>
-    <lastBuildDate>Thu, 25 Jan 2018 18:43:37 +0000</lastBuildDate>
+    <pubDate>Mon, 29 Jan 2018 15:27:58 +0000</pubDate>
+    <lastBuildDate>Mon, 29 Jan 2018 15:27:58 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>Personal automation as code practice</title>
+        <description>&lt;p&gt;Perhaps once natural tendency of programmers is to want to automate too many things, especially when it comes to their
+personal stuff. I say &amp;#39;programmers&amp;#39;, because this will surely apply to at least both software developers and DevOps engineers,
+as two disciplines for which people use programming languages and into which I think people often fall as a result programming for a hobby.&lt;/p&gt;
+
+&lt;p&gt;Whilst trying to get something done, and in your own time, it can be tempting to think &amp;#39;what if I automated
+this?&amp;#39;. It may feel like a procrastination tool, and maybe it leads you down a rabbit hole of stolen time with no
+useful result. Or you automate a task and only ever do it once, finding that perfect, one-use-only regex - there&amp;#39;s that
+old adage about programmers.&lt;/p&gt;
+
+&lt;p&gt;I definitely have this tendency, and of course I make use of it in work environments too, but in a work situation I have to be
+brutally pragmatic about what is worth automating. For instance, using a build tool to automate your web app build and
+initiate a watching/reloading task is one of the most common and time-saving tasks for a web developer.&lt;/p&gt;
+
+&lt;p&gt;At home however I can engage any flight of fancy I like and I&amp;#39;m sure I&amp;#39;m not alone in doing so, but I think it is mostly a
+healthy thing. For one thing, being better at spotting tasks that &lt;em&gt;can&lt;/em&gt; be automated seems like a useful skill for a developer
+or anybody who uses programming languages in their job to automate things. For another, it can be a useful excuse to
+learn a new programming language or tool.&lt;/p&gt;
+
+&lt;p&gt;That last reason is why I decided to learn ZSH inside-out several years ago. I&amp;#39;d only ever had a basic, empirical-type of knowledge of shell
+programming languages, so I had only ever written pretty basic scripts in them. So on late nights after work, I started writing ZSH functions
+to automate tasks I was doing in the terminal over and over again, and this became quite addictive and fun. It also put me
+to sleep pretty effectively.&lt;/p&gt;
+
+&lt;p&gt;As well as automating things I did often, I set
+myself coding challenges to do things that &lt;em&gt;weren&amp;#39;t&lt;/em&gt; useful, just to see if I could, and to see how one might do
+it in ZSH. It&amp;#39;s not that ZSH or shell languages in general are particularly fun or attractive languages to code in,
+but novelty is a stimulating thing and as a programmer you may as well have a better knowledge of shell languages.&lt;/p&gt;
+
+&lt;p&gt;Sometimes a task really &lt;em&gt;was&lt;/em&gt; too hard or annoying to code in ZSH so a few tools written in Python or Ruby have been added.
+In this way I also challenged myself to learn Ruby - and, what is now one of the most valuable tools in my toolbox - regex. Yet
+another excuse to &lt;a href=&quot;https://rsmith.io/blog/learn-regex-or-regret-it/&quot;&gt;learn regex!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Overall, as with the personal side-project, I think this kind of habit of developers is a great thing, and really
+helps to maintain that love for programming, that can sometimes become a little jaded after too much hard work.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
+        <link>https://rsmith.io/blog/personal-automation-as-code-practice/</link>
+        <guid isPermaLink="true">https://rsmith.io/blog/personal-automation-as-code-practice/</guid>
+        
+        
+      </item>
     
       <item>
         <title>When should you write unit tests?</title>
@@ -789,24 +833,6 @@ gulp.task('haml-build', function () {
         <pubDate>Thu, 04 Jun 2015 00:00:00 +0100</pubDate>
         <link>https://rsmith.io/blog/jekyll-gulp-haml-sass-browsersync/</link>
         <guid isPermaLink="true">https://rsmith.io/blog/jekyll-gulp-haml-sass-browsersync/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>RSS Reader Script</title>
-        <description>&lt;p&gt;I wanted a quick, lightweight way to browse and open articles from RSS feeds from within the terminal. I wrote a short
-&lt;a href=&quot;https://github.com/robinrob/rss-opener.git&quot;&gt;&lt;span&gt;Source code repository for RSS Reader Script project&lt;/span&gt;&lt;/a&gt; for quickly opening RSS feed articles in a web browser.&lt;/p&gt;
-
-&lt;h2&gt;Screenshot&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/rss-opener.png&quot; alt=&quot;RSS Reader Usage Screenshot&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Further details on its usage are given in the README file in the project.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 24 May 2015 00:00:00 +0100</pubDate>
-        <link>https://rsmith.io/blog/rss-feed-reader/</link>
-        <guid isPermaLink="true">https://rsmith.io/blog/rss-feed-reader/</guid>
         
         
       </item>
