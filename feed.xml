@@ -6,8 +6,8 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 06 Feb 2018 15:33:37 +0000</pubDate>
-    <lastBuildDate>Tue, 06 Feb 2018 15:33:37 +0000</lastBuildDate>
+    <pubDate>Tue, 06 Feb 2018 15:36:19 +0000</pubDate>
+    <lastBuildDate>Tue, 06 Feb 2018 15:36:19 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -69,6 +69,51 @@ who is a student of &lt;a href=&quot;https://codeclan.com&quot;&gt;CodeClan&lt;/
         <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
         <link>https://rsmith.io/blog/whats-so-addictive-about-programming/</link>
         <guid isPermaLink="true">https://rsmith.io/blog/whats-so-addictive-about-programming/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Personal automation as code practice</title>
+        <description>&lt;p&gt;Perhaps one natural tendency of programmers is to want to automate too many things, especially when it comes to their
+personal stuff. I say &amp;#39;programmers&amp;#39;, because this will surely apply to at least both software developers and DevOps engineers,
+as two disciplines for which people use programming languages and into which I think people often fall as a result programming
+as a hobby.&lt;/p&gt;
+
+&lt;p&gt;Whilst trying to get something done in your own time, it can be tempting to think &amp;#39;&lt;em&gt;what if I automated
+this?&lt;/em&gt;&amp;#39;. It may feel like a procrastination tool, and maybe it leads you down a rabbit hole of stolen time with no
+useful result. Or you automate a task and only ever do it once, finding that perfect, one-use-only regex - there&amp;#39;s that
+old adage about programmers.&lt;/p&gt;
+
+&lt;p&gt;I definitely have this tendency, and of course I make use of it in work environments too, but in a work situation I have to be
+brutally pragmatic about what is worth automating. For instance, using a build tool to automate your web app build and
+initiate a watching/reloading task is one of the most common and time-saving tasks for a web developer.&lt;/p&gt;
+
+&lt;p&gt;At home however I can engage any flight of fancy I like and I&amp;#39;m sure I&amp;#39;m not alone in doing so, but I think it is mostly a
+healthy thing. For one thing, being better at spotting tasks that &lt;em&gt;can&lt;/em&gt; be automated seems like a useful skill for a developer
+or anybody who uses programming languages in their job to automate things. For another, it can be a useful excuse to
+learn a new programming language or tool.&lt;/p&gt;
+
+&lt;p&gt;That last reason is why I decided to learn ZSH inside-out several years ago. I&amp;#39;d only ever had a basic, empirical-type of knowledge of shell
+programming languages, so I had only ever written pretty basic scripts in them. So on late nights after work, I started writing ZSH functions
+to automate tasks I was doing in the terminal over and over again, and this became quite addictive and fun. It also put me
+to sleep pretty effectively.&lt;/p&gt;
+
+&lt;p&gt;As well as automating things I did often, I set
+myself coding challenges to do things that &lt;em&gt;weren&amp;#39;t&lt;/em&gt; useful, just to see if I could, and to see how one might do
+it in ZSH. It&amp;#39;s not that ZSH or shell languages in general are particularly fun or attractive languages to code in,
+but novelty is a stimulating thing and as a programmer you may as well have a better knowledge of shell languages.&lt;/p&gt;
+
+&lt;p&gt;Sometimes a task really &lt;em&gt;was&lt;/em&gt; too hard or annoying to code in ZSH so a few tools written in Python or Ruby have been added.
+In this way I also challenged myself to learn Ruby - and, what is now one of the most valuable tools in my toolbox - regex. Yet
+another excuse to &lt;a href=&quot;https://rsmith.io/blog/learn-regex-or-regret-it/&quot;&gt;learn regex!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Overall, as with the personal side-project, I think this kind of habit of developers is a great thing, and really
+helps to maintain that love for programming, that can sometimes become a little jaded after too much hard work.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 29 Jan 2018 00:00:00 +0000</pubDate>
+        <link>https://rsmith.io/blog/personal-automation-as-code-practice/</link>
+        <guid isPermaLink="true">https://rsmith.io/blog/personal-automation-as-code-practice/</guid>
         
         
       </item>
@@ -767,91 +812,6 @@ example usages.&lt;/p&gt;
         <pubDate>Wed, 01 Jul 2015 00:00:00 +0100</pubDate>
         <link>https://rsmith.io/blog/console-writer-jquery-plugin/</link>
         <guid isPermaLink="true">https://rsmith.io/blog/console-writer-jquery-plugin/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Jekyll Gulp HAML SASS BrowserSync</title>
-        <description>&lt;p&gt;Whilst using Github&amp;#39;s Jekyll framework to build a static website, I noticed a lack of built-in HAML support. I am a big fan of using HAML to produce HTML. Apart from this lack of support for HAML, I enjoy using Jekyll.&lt;/p&gt;
-
-&lt;p&gt;Since I was using Gulp to manage the build process, I needed a Gulp task to handle the HAML preprocessing. I initially tried using the &lt;a href=&quot;https://www.npmjs.com/package/gulp-haml&quot;&gt;&lt;span&gt;Gulp-Haml NPM package&lt;/span&gt;gulp-haml&lt;/a&gt; module in my HAML task, but it produced incorrect results a few times. I came across the node module &lt;a href=&quot;https://github.com/moneypenny/gulp-ruby-haml&quot;&gt;&lt;span&gt;Gulp-Ruby-Haml NPM package&lt;/span&gt;gulp-ruby-haml&lt;/a&gt;, which is a wrapper on the Ruby gem &lt;a href=&quot;https://rubygems.org/gems/haml&quot;&gt;&lt;span&gt;HAML ruby package&lt;/span&gt;haml&lt;/a&gt;, and which gives accurate results.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;HAML Processing&lt;/h2&gt;
-
-&lt;p&gt;HAML files reside inside a &lt;code&gt;_haml&lt;/code&gt; folder which sits at the location of the resultant HTML files. For example:
-&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;project-root/
-    index/
-        _haml/
-                index.haml
-        index.html
-    _includes/
-        _haml/
-            footer.haml
-            head.haml
-            nav.haml
-        footer.html
-        head.html
-        nav.html
-&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
-
-&lt;p&gt;The HAML build task is actually fairly slow compared to the CSS or Javascript processing tasks. It can take up to 10 seconds to process all of the HAML in the project. This is unacceptable when rebuilding on-the-fly while making changes.&lt;/p&gt;
-
-&lt;p&gt;To avoid slow build times, I use a separate &lt;code&gt;haml-watch&lt;/code&gt; task that watches the HAML files for changes, then only processes the files that changed. The stream is then piped into the code for compiling the HAML, which is contained in the function &lt;code&gt;hamlBuild()&lt;/code&gt;. This stream-piping step makes use of &lt;a href=&quot;https://www.npmjs.com/package/stream-combiner2&quot;&gt;&lt;span&gt;Stream Combiner 2 NPM package&lt;/span&gt;stream-combiner2&lt;/a&gt;. Below is the code for both HAML tasks:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;var haml = require('gulp-ruby-haml')
-var combiner = require('stream-combiner2')
-
-...
-
-var config = {
-    paths: {
-        ...
-        haml: {
-            src: ['**/_haml/*.haml']
-        },
-        ...
-    }
-}
-
-...
-
-/* hamlBuild() contains the shared build logic used by haml-watch and haml-build */
-function hamlBuild() {
-    return combiner(
-        haml(),
-        rename(function (path) {
-            path.dirname += '/../'
-        })
-    )
-}
-
-/* Watch and compile only changed HAML files to HTML.
- * haml-watch has its own task to avoid doing a full HAML build on each .haml file change, since a full HAML build
- * can be quite slow.
- */
-gulp.task('haml-watch', function () {
-    gulp.src(config.paths.haml.src, {read: false})
-        .pipe(watch(config.paths.haml.src))
-        .pipe(hamlBuild())
-        .pipe(gulp.dest('./'))
-})
-
-/* Compile all HAML files to HTML. */
-gulp.task('haml-build', function () {
-    return gulp.src(config.paths.haml.src)
-        .pipe(hamlBuild())
-        .pipe(gulp.dest('./'))
-})
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;Full Site Template&lt;/h2&gt;
-
-&lt;p&gt;Whilst researching Jekyll, I noticed a few other people sharing their Jekyll setups as site templates. Here is my own &lt;a href=&quot;https://github.com/robinrob/jekyll-gulp-haml-sass-browsersync.git&quot;&gt;&lt;span&gt;Source repository for Jekyll-Gulp-Haml-Sass-Browsersync project&lt;/span&gt;jekyll-gulp-haml-sass-browsersync&lt;/a&gt; template which includes my full &lt;a href=&quot;https://github.com/robinrob/jekyll-gulp-haml-sass-browsersync/blob/master/gulpfile.js&quot;&gt;&lt;span&gt;Gulpfile for Jekyll-Gulp-Haml-Sass-Browsersync project on source repository page&lt;/span&gt;Gulpfile&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 04 Jun 2015 00:00:00 +0100</pubDate>
-        <link>https://rsmith.io/blog/jekyll-gulp-haml-sass-browsersync/</link>
-        <guid isPermaLink="true">https://rsmith.io/blog/jekyll-gulp-haml-sass-browsersync/</guid>
         
         
       </item>
