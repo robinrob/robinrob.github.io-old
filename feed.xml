@@ -6,8 +6,8 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 08 Feb 2018 16:43:20 +0000</pubDate>
-    <lastBuildDate>Thu, 08 Feb 2018 16:43:20 +0000</lastBuildDate>
+    <pubDate>Thu, 08 Feb 2018 16:48:59 +0000</pubDate>
+    <lastBuildDate>Thu, 08 Feb 2018 16:48:59 +0000</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
     
       <item>
@@ -23,9 +23,13 @@ displaying guitar chord variations) I found
  variations of guitar chords. But I still wanted the database functionality for querying the records quickly.&lt;/p&gt;
 
 &lt;p&gt;I&amp;#39;ve since decided that I don&amp;#39;t need the database layer after all, as I am only dealing with ~several hundred records.
-  After more thought I realised that the potential costs of having an extra persistence layer are not worth any
-  advantage that might be gained over holding all of that data in memory, compared to simply loading the data in from
-  the JSON on each app load. This also makes serialisation and de-serialisation a bit easier, as I can take full
+  After more thought I realised that the costs of having an extra persistence layer (e.g. handling app
+   updates on users&amp;#39; devices) in my case are not worth any potential
+  advantages that might be gained over holding all of that data in memory, compared to simply loading the data in from
+  the JSON on each app load.&lt;/p&gt;
+
+&lt;p&gt;Storing the pre-calculated data as static JSON effectively keeps the app stateless in that aspect.
+  This also makes serialisation and de-serialisation a bit easier, as I can take full
   advantage of Swift 4&amp;#39;s built-in Encoding/Decoding API.&lt;/p&gt;
 
 &lt;p&gt;Nevertheless it was still a fairly interesting process to get things working, so I&amp;#39;ll give some code examples
