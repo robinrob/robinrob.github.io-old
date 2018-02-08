@@ -6,9 +6,290 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 08 Feb 2018 13:51:33 +0000</pubDate>
-    <lastBuildDate>Thu, 08 Feb 2018 13:51:33 +0000</lastBuildDate>
-    <generator>Jekyll v3.6.2</generator>
+    <pubDate>Thu, 08 Feb 2018 16:43:20 +0000</pubDate>
+    <lastBuildDate>Thu, 08 Feb 2018 16:43:20 +0000</lastBuildDate>
+    <generator>Jekyll v3.7.2</generator>
+    
+      <item>
+        <title>Encoding &amp; Decoding Swift 4 Models</title>
+        <description>&lt;p&gt;Tee-ell-duh-ruh: view my code examples as a &lt;a href=&quot;https://github.com/robinrob/swift-4-model-coding/blob/master/swift-4-model-coding/CodableTest.swift&quot;&gt;single file&lt;/a&gt;.
+Running the &lt;a href=&quot;https://github.com/robinrob/swift-4-model-coding&quot;&gt;project&lt;/a&gt; in xcode runs the examples and displays some
+output for each.&lt;/p&gt;
+
+&lt;p&gt;Whilst working on &lt;a href=&quot;https://github.com/robinrob/guitar-chords&quot;&gt;GuitarChords&lt;/a&gt; (a personal iOS project of mine for
+displaying guitar chord variations) I found
+ myself wanting to be able to pre-load the native SQLite database with data serialised in a JSON file. The motivation
+ for this was because my app deals with a bunch of data that I&amp;#39;ve pre-calculated and which doesn&amp;#39;t change -
+ variations of guitar chords. But I still wanted the database functionality for querying the records quickly.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve since decided that I don&amp;#39;t need the database layer after all, as I am only dealing with ~several hundred records.
+  After more thought I realised that the potential costs of having an extra persistence layer are not worth any
+  advantage that might be gained over holding all of that data in memory, compared to simply loading the data in from
+  the JSON on each app load. This also makes serialisation and de-serialisation a bit easier, as I can take full
+  advantage of Swift 4&amp;#39;s built-in Encoding/Decoding API.&lt;/p&gt;
+
+&lt;p&gt;Nevertheless it was still a fairly interesting process to get things working, so I&amp;#39;ll give some code examples
+  of encoding &amp;amp; decoding objects in Swift, building up to combining serialisation with persistence, and perhaps it&amp;#39;ll
+  help somebody else who does need to do this, or myself in future.&lt;/p&gt;
+
+&lt;h2&gt;Codable&lt;/h2&gt;
+
+&lt;p&gt;Swift documentation is good and the best place to start for this topic is
+&lt;a href=&quot;https://developer.apple.com/documentation/foundation/archives_and_serialization/encoding_and_decoding_custom_types&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Encoding a Struct (into JSON)&lt;/h3&gt;
+
+&lt;p&gt;If the instance variables of a type that you want to encode all implement the &lt;code&gt;Encodable&lt;/code&gt; protocol, then Swift will
+encode the whole thing automatically. So for instance a Struct consisting only of standard built-in Swift types (which
+implement the &lt;code&gt;Encodable&lt;/code&gt; protocol) can be easily converted into JSON:&lt;/p&gt;
+
+&lt;p&gt;code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;swift small-code&quot;&gt;struct CodableStruct: Codable {
+    var name: String
+    var age: Int
+}
+
+static func encodeStructAsJSON() {
+    let obj = CodableStruct(name: &quot;Robin&quot;, age: 30)
+    do {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        let data = try encoder.encode(obj)
+        let json = String(data: data, encoding: .utf8)!
+        print(&quot;json: \(json)&quot;)
+    } catch {
+        print(&quot;encoding error: \(error)&quot;)
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;output:&lt;/p&gt;
+
+&lt;pre class=&quot;plaintext&quot;&gt;&lt;code class=&quot;plaintext small-code&quot;&gt;json: {
+  &quot;name&quot; : &quot;Robin&quot;,
+  &quot;age&quot; : 30
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Encoding a Class&lt;/h3&gt;
+
+&lt;p&gt;The same thing above also works for a Class whose instance variables all implement &lt;code&gt;Encodable&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;swift small-code&quot;&gt;class CodableClass: Codable {
+    var name: String
+    var age: Int
+
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+}
+
+static func encodeClassAsJSON() {
+    let obj = CodableClass(name: &quot;Robin&quot;, age: 30)
+    do {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        let data = try encoder.encode(obj)
+        let json = String(data: data, encoding: .utf8)!
+        print(&quot;json: \(json)&quot;)
+    } catch {
+        print(&quot;encoding error: \(error)&quot;)
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;output:&lt;/p&gt;
+
+&lt;pre class=&quot;plaintext&quot;&gt;&lt;code class=&quot;plaintext small-code&quot;&gt;json: {
+  &quot;name&quot; : &quot;Robin&quot;,
+  &quot;age&quot; : 30
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Decoding a Struct (from JSON)&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;swift small-code&quot;&gt;static func decodeStructFromJSON() {
+    let json = &quot;{\&quot;name\&quot;:\&quot;Robin\&quot;,\&quot;age\&quot;:30}&quot;
+
+    do {
+        let obj = try JSONDecoder().decode(
+            CodableStruct.self,
+            from: json.data(using: .utf8)!
+        )
+        print(&quot;obj.name: \(obj.name)&quot;)
+    } catch {
+        print(&quot;encoding error: \(error)&quot;)
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;output:&lt;/p&gt;
+
+&lt;pre class=&quot;plaintext&quot;&gt;&lt;code class=&quot;plaintext small-code&quot;&gt;obj.name: Robin
+person.age: 30
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Decoding a Class&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;swift small-code&quot;&gt;static func decodeClassFromJSON() {
+    let json = &quot;{\&quot;name\&quot;:\&quot;Robin\&quot;,\&quot;age\&quot;:30}&quot;
+
+    do {
+        let obj = try JSONDecoder().decode(
+            CodableClass.self,
+            from: json.data(using: .utf8)!
+        )
+        print(&quot;obj.name: \(obj.name)&quot;)
+        print(&quot;person.age: \(String(obj.age))&quot;)
+    } catch {
+        print(&quot;decoding error: \(error)&quot;)
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;output:&lt;/p&gt;
+
+&lt;pre class=&quot;plaintext&quot;&gt;&lt;code class=&quot;plaintext small-code&quot;&gt;obj.name: Robin
+person.age: 30
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Encoding a Database model class&lt;/h3&gt;
+
+&lt;p&gt;It gets more tricky when you want to directly encode/decode a class which represents one of your database models, because
+ we need to do custom decoding &amp;amp; encoding. It looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;swift small-code&quot;&gt;@objc(PersonModel)
+final class PersonModel: NSManagedObject, Encodable, Decodable {
+    init(from decoder: Decoder) {
+        super.init(
+            entity: NSEntityDescription.entity(
+                forEntityName: &quot;PersonModel&quot;,
+                in: context
+            )!,
+            insertInto: context
+        )
+
+        do {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            self.name = try container.decode(type(of: self.name), forKey: .name)
+            self.age = try container.decode(type(of: self.age), forKey: .age)
+        } catch {
+            print(&quot;decoding error: \(error)&quot;)
+        }
+    }
+
+    private override init(
+        entity: NSEntityDescription,
+        insertInto context: NSManagedObjectContext?
+    ) {
+        super.init(entity: entity, insertInto: context)
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.name, forKey: .name)
+        try container.encode(self.age, forKey: .age)
+    }
+
+    enum CodingKeys: CodingKey {
+        case name
+        case age
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;context&lt;/code&gt; is an in-memory store (also useful for unit testing on models!) created by the following function:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;swift small-code&quot;&gt;func getBackgroundContextForTesting(
+    forModelType modelType: AnyClass
+) -&gt; NSManagedObjectContext {
+    let managedObjectModel = NSManagedObjectModel.mergedModel(
+        from: [Bundle(for: modelType)]
+    )!
+
+    let container = NSPersistentContainer(
+        name: &quot;PersonModel&quot;,
+        managedObjectModel: managedObjectModel
+    )
+    let description = NSPersistentStoreDescription()
+    description.type = NSInMemoryStoreType
+
+    container.persistentStoreDescriptions = [description]
+    container.loadPersistentStores { (description, error) in
+        precondition( description.type == NSInMemoryStoreType )
+
+        if let error = error {
+            fatalError(&quot;Creating in-memory coordinator failed \(error)&quot;)
+        }
+    }
+    return container.newBackgroundContext()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then finally, encoding the database model class:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;swift small-code&quot;&gt;static func encodeModelAsJSON() {
+    let obj = NSEntityDescription.insertNewObject(
+        forEntityName: &quot;PersonModel&quot;,
+        into: context
+        ) as! PersonModel
+
+    obj.name = &quot;Robin&quot;
+    obj.age = 30
+
+    do {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        let data = try encoder.encode(obj)
+        let json = String(data: data, encoding: .utf8)!
+        print(&quot;json: \(json)&quot;)
+    } catch {
+        print(&quot;encoding error: \(error)&quot;)
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;output:&lt;/p&gt;
+
+&lt;pre class=&quot;plaintext&quot;&gt;&lt;code class=&quot;plaintext small-code&quot;&gt;json: {
+  &quot;name&quot; : &quot;Robin&quot;,
+  &quot;age&quot; : 30
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Decoding a Database model class&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;swift small-code&quot;&gt;static func decodeModelFromJSON() {
+    let json = &quot;{\&quot;name\&quot;: \&quot;Robin\&quot;,\&quot;age\&quot;: 30}&quot;
+    do {
+        let person = try JSONDecoder().decode(
+            PersonModel.self,
+            from: json.data(using: .utf8)
+        !)
+        try context.save()
+        print(&quot;person.name: \(person.name!)&quot;)
+        print(&quot;person.age: \(String(person.age))&quot;)
+    } catch {
+        print(&quot;decoding error: \(error)&quot;)
+    }
+}
+&lt;/pre&gt;&lt;/code&gt;
+
+output:
+
+&lt;pre class=&quot;plaintext&quot;&gt;&lt;code class=&quot;plaintext small-code&quot;&gt;obj.name: Robin
+person.age: 30
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Thu, 08 Feb 2018 00:00:00 +0000</pubDate>
+        <link>https://rsmith.io/blog/encoding-decoding-swift-models/</link>
+        <guid isPermaLink="true">https://rsmith.io/blog/encoding-decoding-swift-models/</guid>
+        
+        
+      </item>
     
       <item>
         <title>What's so fun about programming?</title>
@@ -772,46 +1053,6 @@ and discover command-line tools.&lt;/p&gt;
         <pubDate>Tue, 25 Aug 2015 00:00:00 +0100</pubDate>
         <link>https://rsmith.io/blog/faster-variable-debugging/</link>
         <guid isPermaLink="true">https://rsmith.io/blog/faster-variable-debugging/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>ConsoleWriter jQuery Plugin</title>
-        <description>&lt;h2 class=&quot;console-writer&quot; cw-sound=&quot;true&quot; cw-animation=&quot;true&quot;&gt;Edit Me!&lt;/h2&gt;
-
-&lt;p&gt;I wanted to create a console-like typing effect on a heading element, with the heading firstly 
-appearing character by character as if being typed in at a developer&amp;#39;s console. This sort of thing has already been done
-as in &lt;a href=&quot;http://www.mattboldt.com/demos/typed-js/&quot;&gt;Typed.js&lt;/a&gt;,
-&lt;a href=&quot;http://codepen.io/voronianski/pen/aicwk&quot;&gt;typeWriter.js&lt;/a&gt; or
-&lt;a href=&quot;https://github.com/fardjad/realistic-typewriter.js&quot;&gt;realistic-typewriter.js&lt;/a&gt;. As with most ideas in the JS
-world or software world, it is fair to say that this idea has been done before.&lt;/p&gt;
-
-&lt;p&gt;My main motivation for the project was to gain familiarity with using jQuery and I believe that embarking on a pet
-project is the most fun and productive way to learn a new programming language or tool. &lt;/p&gt;
-
-&lt;p&gt;The main feature that I wanted to implemented with the project was to allow the site visitor to modify the heading element by focusing it,
-deleting existing characters and typing whatever they wanted into the element, complete with a blinking cursor at the end
-of the line, as if they were typing on a command line. I added keyboard typing sounds to try to heighten the effect. Try it now by clicking any of
-the headings within this blog article.&lt;/p&gt;
-
-&lt;h2 class=&quot;console-writer&quot; cw-typing-sound=&quot;true&quot;&gt;ConsoleWriter&lt;/h2&gt;
-
-&lt;p&gt;I packaged the project up as a jQuery plugin: &lt;a href=&quot;https://github.com/robinrob/console-writer.git&quot;&gt;ConsoleWriter&lt;/a&gt;,
-designed with a focus on user-friendliness and configurability using options.&lt;/p&gt;
-
-&lt;p&gt;The project can be installed through Bower using the following command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;bower install console-writer&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The heading above this paragraph displays the default method of usage which requires
-just adding the &lt;code&gt;console-writer&lt;/code&gt; class to the element. Reload the page again to see the typewriter effect. The &lt;code&gt;readme&lt;/code&gt;
-file included in the repo describes the options and how to set them. There is also a &lt;code&gt;demo.html&lt;/code&gt; file which shows
-example usages.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 01 Jul 2015 00:00:00 +0100</pubDate>
-        <link>https://rsmith.io/blog/console-writer-jquery-plugin/</link>
-        <guid isPermaLink="true">https://rsmith.io/blog/console-writer-jquery-plugin/</guid>
         
         
       </item>
