@@ -6,13 +6,13 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 09 Feb 2018 09:09:19 +0000</pubDate>
-    <lastBuildDate>Fri, 09 Feb 2018 09:09:19 +0000</lastBuildDate>
+    <pubDate>Mon, 12 Feb 2018 20:38:04 +0000</pubDate>
+    <lastBuildDate>Mon, 12 Feb 2018 20:38:04 +0000</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
     
       <item>
         <title>Encoding &amp; Decoding Swift 4 Models</title>
-        <description>&lt;p&gt;Tee-ell-duh-ruh: view my code examples as a &lt;a href=&quot;https://github.com/robinrob/swift-4-model-coding/blob/master/swift-4-model-coding/CodableTest.swift&quot;&gt;single file&lt;/a&gt;.
+        <description>&lt;p&gt;Tee-ell-dee-argh: view my code examples as a &lt;a href=&quot;https://github.com/robinrob/swift-4-model-coding/blob/master/swift-4-model-coding/CodableTest.swift&quot;&gt;single file&lt;/a&gt;.
 Running the &lt;a href=&quot;https://github.com/robinrob/swift-4-model-coding&quot;&gt;project&lt;/a&gt; in xcode runs the examples and displays some
 output for each.&lt;/p&gt;
 
