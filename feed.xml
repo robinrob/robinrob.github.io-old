@@ -6,9 +6,91 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 12 Feb 2018 20:38:04 +0000</pubDate>
-    <lastBuildDate>Mon, 12 Feb 2018 20:38:04 +0000</lastBuildDate>
+    <pubDate>Fri, 16 Feb 2018 08:34:17 +0000</pubDate>
+    <lastBuildDate>Fri, 16 Feb 2018 08:34:17 +0000</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
+    
+      <item>
+        <title>Deciding What to Learn Next as a Programmer</title>
+        <description>&lt;p&gt;The fields of web and mobile software development appear to change very quickly, with new languages (and versions of
+languages) and frameworks appearing all the time. There are also countless named methodologies for how to go
+about software development.&lt;/p&gt;
+
+&lt;p&gt;New features are appearing in languages all the time, through specific updates to existing
+languages - for example: Lambdas and first-class functions in Java 8, generators in ECMAScript 6) - to more general
+trends like the increasing inclusion of functional programming concepts in modern languages, particularly in new
+languages like Swift where there is the opportunity to start completely afresh. (Of course it&amp;#39;s not that
+functional programming ideas are new!).&lt;/p&gt;
+
+&lt;p&gt;To a curious-minded developer, languages and even frameworks are fun to learn almost for their own sake, particularly new ones.
+Each language has its own character and subtly leads you into doing things in particular ways. Sometimes these
+new methods solve problems that you&amp;#39;ve often come across whilst using other languages, so there is excitement at the
+prospect of future benefit from the new features or from the approach. There is an emotional response to the creative aspects of the
+language, to things as simple as its appearance or empathy for particular decisions its designers have made.&lt;/p&gt;
+
+&lt;p&gt;When a language update or new language makes a big deal about a computer science concept that you&amp;#39;re not familiar with, it can serve
+as a nice introduction and an extra mxotivator to go and learn about it, or to refresh your knowledge about it.&lt;/p&gt;
+
+&lt;p&gt;As you climb up the stack and the new things become higher and higher-level, or the multiplicities of new things becomes
+greater, it becomes more and more necessary to be pragmatic about what you spend your time on. The hierarchy of knowledge
+and skills that I need, as I see it, goes roughly (from low- to high-level):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mathematics&lt;/li&gt;
+&lt;li&gt;Creativity&lt;/li&gt;
+&lt;li&gt;Computer science&lt;/li&gt;
+&lt;li&gt;Programming languages&lt;/li&gt;
+&lt;li&gt;Software design&lt;/li&gt;
+&lt;li&gt;Databases&lt;/li&gt;
+&lt;li&gt;Web protocols (e.g. HTTP, SSH)&lt;/li&gt;
+&lt;li&gt;Cloud technologies&lt;/li&gt;
+&lt;li&gt;Web frameworks&lt;/li&gt;
+&lt;li&gt;Libraries&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All of the above areas of skills and knowledge are required in order to make complex web applications. As you go down
+the list, the concepts become higher and higher-level, they become easier and easier to create from scratch and examples
+of them become more and more numerous.&lt;/p&gt;
+
+&lt;p&gt;Things like computer science knowledge and software design are skills that a developer needs to be able to apply to all
+software development situations. Practical and thorough understanding of these comes through actually making applications,
+in diverse scenarios. So to some extent is necessary to delve into multiple programming languages and application
+frameworks.&lt;/p&gt;
+
+&lt;p&gt;At some point though you have to start being pragmatic about what is worth spending time on learning. Once a developer
+has learned several languages or frameworks, acquiring new ones becomes quite easy and inexpensive. For me, usually
+following a book and making a moderately complex personal project gives me ~95% of the knowledge and fluency I need in any
+ particular language or framework, in order to be really effective with it professionally. Different projects are going to use different aspects
+of languages or frameworks to lesser and greater amounts, so as long as you have knowledge of a bit of everything,
+any codebase is going to be recognisable.&lt;/p&gt;
+
+&lt;p&gt;My personal emphasis is towards spending more time actually making things. Given an initial concept,
+I am confident that I can create what I set out to, choosing the tool that feels best for the particular project at that particular time.
+However it is still important to keep up with the trends by doing things like reading blogs or &lt;a href=&quot;https://news.ycombinator.com&quot;&gt;Hacker News&lt;/a&gt;, or going
+to technology meet-ups, and anything else that helps keep you up-to-date.&lt;/p&gt;
+
+&lt;p&gt;It can feel as though a lot of emphasis gets placed on the virtues of having experience with a given new web framework, as
+it suddenly becomes popular. And of course over time, these new ways of doing things are healthy as a way of gradually
+optimising ways of working, keeping up with the changing demands of web software as the infrastructure becomes more
+powerful over time.&lt;/p&gt;
+
+&lt;p&gt;But I do think it&amp;#39;s important to keep the focus on the fundamentals - the fundamental skills
+of being able to choose the right tool or language to use, to write software that is structured nicely, and to make
+useable applications. I think these are the real differentiators between developers, are the most valuable to aspire to and take the most time to learn
+in the first place. A word of warning: this approach does tend to make you most-suited to hipster startup environments.
+ Bigger businesses may want to hire the 10-year Java guy over you.&lt;/p&gt;
+
+&lt;p&gt;Therefore for me the natural conclusion is to spend good time at every level of the &amp;#39;knowledge stack&amp;#39;, on an on-going basis
+(always stay humble and open to new ideas and knowledge), but to prioritise towards the fundamentals, and a great way
+to do all of that is just to keep making things. Start with a creative idea, work towards it and you will keep learning
+what you need to.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 16 Feb 2018 00:00:00 +0000</pubDate>
+        <link>https://rsmith.io/blog/deciding-what-to-learn-next/</link>
+        <guid isPermaLink="true">https://rsmith.io/blog/deciding-what-to-learn-next/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Encoding &amp; Decoding Swift 4 Models</title>
@@ -296,7 +378,7 @@ person.age: 30
       </item>
     
       <item>
-        <title>What's so fun about programming?</title>
+        <title>What's so Fun About Programming?</title>
         <description>&lt;p&gt;I wouldn&amp;#39;t be the first to discuss this question but it&amp;#39;s something I&amp;#39;ve often thought about, and having made great
 efforts in the past to cross over from a different field into software development, often asked myself. I&amp;#39;m worried
 that I&amp;#39;m about to come off as a bit of a &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_regular_mini-sections_in_Private_Eye#Pseuds_Corner&quot;&gt;pseud&lt;/a&gt; though.&lt;/p&gt;
@@ -359,7 +441,7 @@ who is a student of &lt;a href=&quot;https://codeclan.com&quot;&gt;CodeClan&lt;/
       </item>
     
       <item>
-        <title>Personal automation as code practice</title>
+        <title>Personal Automation as Code Practice</title>
         <description>&lt;p&gt;Perhaps one natural tendency of programmers is to want to automate too many things, especially when it comes to their
 personal stuff. I say &amp;#39;programmers&amp;#39;, because this will surely apply to at least both software developers and DevOps engineers,
 as two disciplines for which people use programming languages and into which I think people often fall as a result programming
@@ -404,7 +486,7 @@ helps to maintain that love for programming, that can sometimes become a little 
       </item>
     
       <item>
-        <title>When should you write unit tests?</title>
+        <title>When Should You Write Unit Tests?</title>
         <description>&lt;h2&gt;Test-driven development?&lt;/h2&gt;
 
 &lt;p&gt;We&amp;#39;ve probably all heard of &lt;a href=&quot;https://en.wikipedia.org/wiki/Test-driven_development&quot;&gt;TDD&lt;/a&gt; (Test-Driven-Development) by now,
@@ -671,10 +753,12 @@ Synonym(s) for 'blue'
       </item>
     
       <item>
-        <title>Python 3.6 string interpolation</title>
-        <description>&lt;p&gt;I learned about this around six months ago, and since then I&amp;#39;ve barely used it because I hadn&amp;#39;t used it enough to
-remember the syntax. And since it&amp;#39;s recent, Googling for it wasn&amp;#39;t returning anything either - since I hadn&amp;#39;t realised it was
-unique to versions 3.6 onwards, I wasn&amp;#39;t looking in the correct documentation versions.&lt;/p&gt;
+        <title>Python 3.6 String Interpolation</title>
+        <description>&lt;p&gt;If you&amp;#39;re one of those Ruby/Python purists look away now.&lt;/p&gt;
+
+&lt;p&gt;I first learned about this new Python 3 syntax for string interpolation around six months ago, and since then I&amp;#39;ve barely
+used it because I hadn&amp;#39;t used it enough to remember the syntax. And since it&amp;#39;s recent, Googling for it wasn&amp;#39;t returning
+much either - and since I hadn&amp;#39;t realised it was unique to versions 3.6 onwards, I wasn&amp;#39;t looking in the correct documentation versions.&lt;/p&gt;
 
 &lt;p&gt;Essentially Python 3.6 introduces a new form of string interpolation that is similar to the way one can embed variables
 into strings in Ruby:
@@ -978,83 +1062,6 @@ not often that such a simple, short string of characters can give such power.&lt
         <pubDate>Sat, 29 Aug 2015 00:00:00 +0100</pubDate>
         <link>https://rsmith.io/blog/learn-regex-or-regret-it/</link>
         <guid isPermaLink="true">https://rsmith.io/blog/learn-regex-or-regret-it/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Faster Variable Debugging</title>
-        <description>&lt;p&gt;Almost inevitably whilst debugging code, regardless of any additional tools that you may have available (e.g.
-browser development tools when debugging front-end code), it can be desirable to quickly print the contents of a
-variable to the program output. Maybe you don&amp;#39;t have the time to learn how to use a more comprehensive tool in that moment,
-or doing so would actually take more time. You can find yourself repetitively typing the same mundane set of characters
-out that results in printing something in the language that you happen to be using.&lt;/p&gt;
-
-&lt;p&gt;I use my terminal extensively for little time-saving pieces of automation, that over the course of a day can have a big
-impact on your efficiency. One example is a set of short commands for printing things out in various languages:&lt;/p&gt;
-
-&lt;h2&gt;Javascript&lt;/h2&gt;
-
-&lt;h3&gt;&lt;code&gt;js_log&lt;/code&gt;&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;copy_print &quot;console.log('$(upper $*)')&quot;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;&lt;code&gt;copy_print&lt;/code&gt; (ZSH function)&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&quot;zsh&quot;&gt;copy_print () {
-    printf $@ | pbcopy &amp;&amp; pbpaste
-}&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;&lt;code&gt;upper&lt;/code&gt; (ZSH function)&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&quot;zsh&quot;&gt;upper () {
-    print $@:u
-}&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;&lt;code&gt;js_log_object&lt;/code&gt;&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;console.log('myVar: ' + JSON.stringify(myVar, null, '\t'))&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;Python&lt;/h2&gt;
-
-&lt;h3&gt;&lt;code&gt;python_log&lt;/code&gt;&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;python_log () {
-    copy_print &quot;print '$(upper $*)'&quot;
-}&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;&lt;code&gt;python_log_var&lt;/code&gt;&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;python_log_var () {
-    copy_print &quot;print '$1: {var}'.format(var=$1)&quot;
-}&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;&lt;code&gt;python_log_object&lt;/code&gt;&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;python_log_object () {
-    copy_print &quot;import simplejson as simplejson; print '$1: {json}'.format(json=simplejson.dumps($1, indent=4))&quot;
-}&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You get the idea. Usage is simple, like this (after hot-keying to your terminal window and here using an alias &lt;code&gt;logpo&lt;/code&gt; for &lt;code&gt;log_python_object&lt;/code&gt;)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;zsh&quot;&gt;⚡ logpo my_var
-import simplejson as simplejson; print 'my_var: {json}'.format(json=simplejson.dumps(my_var, indent=4))%
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The above printed snippet is then in the clipboard and you can just paste it into the code where you want it, which of course
-prints when run:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;my_var: {
-    &quot;age&quot;: 28,
-    &quot;name&quot;: &quot;Robin&quot;
-}&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;There is fun in automating out repetitive actions that really bring down your day. It&amp;#39;s also a handy way to learn ZSH
-and discover command-line tools.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 25 Aug 2015 00:00:00 +0100</pubDate>
-        <link>https://rsmith.io/blog/faster-variable-debugging/</link>
-        <guid isPermaLink="true">https://rsmith.io/blog/faster-variable-debugging/</guid>
         
         
       </item>
