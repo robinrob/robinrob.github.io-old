@@ -6,9 +6,260 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 17 Feb 2018 15:28:47 +0000</pubDate>
-    <lastBuildDate>Sat, 17 Feb 2018 15:28:47 +0000</lastBuildDate>
+    <pubDate>Tue, 13 Mar 2018 14:04:31 +0000</pubDate>
+    <lastBuildDate>Tue, 13 Mar 2018 14:04:31 +0000</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
+    
+      <item>
+        <title>Getting started with OCaml</title>
+        <description>&lt;p&gt;After much persuasion from a friend over the last few years, I&amp;#39;ve started learning &lt;a href=&quot;https://ocaml.org/learn/description.html&quot;&gt;OCaml&lt;/a&gt;. So far I am
+really enjoying it and it has been a valuable experience and process of learning. For a good quick background on OCaml, I recommend reading its &lt;a href=&quot;https://en.wikipedia.org/wiki/OCaml&quot;&gt;wikipedia article&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Writing this has turned out to be fairly time-consuming, since it is diffult to write about something
+which is still relatively new to myself whilst aiming for accuracy, so I will be fairly brief on the different aspects that I will touch on. The overall goal is to present all the aspects of OCaml that motivated me to really get into and continue learning it.&lt;/p&gt;
+
+&lt;p&gt;I will show some basic code examples of the sorts of things that attracted me to the language.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ll try to clarify some things which confused me when just starting to learn OCaml, and caused some initial pain, so hopefully that is lessened for others
+in the future.&lt;/p&gt;
+
+&lt;p&gt;At the end I will summarise my experiences of learning OCaml so far, where OCaml fits in in the real world, and where I plan to go from here.&lt;/p&gt;
+
+&lt;h2&gt;Functional programming&lt;/h2&gt;
+
+&lt;p&gt;The first thing that drew me towards learning OCaml is its very strong orientation towards &lt;a href=&quot;https://en.wikipedia.org/wiki/Functional_programming&quot;&gt;functional programming&lt;/a&gt;.
+I&amp;#39;ve been thinking about and taking advantage of functional programming techniques more and more over time.&lt;/p&gt;
+
+&lt;p&gt;For me so far, this has essentially been: composing certain sections of code using calls to pure functions, thus to program in a more declerative
+style, helping to reduce mutibility, increase predictability and improve testability of my code. For example: using a map function instead of a for
+loop, or a reduce function when needing to sum something over a collection.&lt;/p&gt;
+
+&lt;p&gt;Whilst doing front-end development, the &lt;a href=&quot;https://lodash.com&quot;&gt;Lodash&lt;/a&gt; library has allowed me to write some really expressive, concise logic for reading, computing from and manipulating data structures. Continuing on like this, I have written my own functions in this way where possible or appropriate. There is more to functional programming than this, and OCaml really puts it at your fingertips.&lt;/p&gt;
+
+&lt;p&gt;Functional programming does not replace other programming paradigms like &lt;a href=&quot;https://en.wikipedia.org/wiki/Object-oriented_programming&quot;&gt;object-oriented&lt;/a&gt;
+programming. Just as with programming languages, one aspect of functional programming might be best-suited to some scenarios,
+whereas object-oriented or some other style is better in another scenario. An application can use a happy combination of different techniques to achieve its goals
+in an elegant and reliable way.&lt;/p&gt;
+
+&lt;h2&gt;Functional programming languages&lt;/h2&gt;
+
+&lt;p&gt;What is a functional programming language? No single factor goes into deciding whether a programming language is &amp;#39;functional&amp;#39;.
+Most languages are &amp;#39;multi-paradigm&amp;#39; - they support a variety of different &lt;a href=&quot;https://en.wikipedia.org/wiki/Programming_paradigm&quot;&gt;paradigms&lt;/a&gt;.
+It&amp;#39;s interesting to compare the paradigms supported by some well-known languages:&lt;/p&gt;
+
+&lt;table class=&quot;programming-languages&quot;&gt;
+    &lt;tr&gt;&lt;th&gt;Language&lt;/th&gt;&lt;th&gt;Imperative&lt;/th&gt;&lt;th&gt;Functional&lt;/th&gt;&lt;th&gt;Object-oriented&lt;/th&gt;&lt;th&gt;Procedural&lt;/th&gt;&lt;th&gt;Reflective&lt;/th&gt;&lt;th&gt;Event-driven&lt;/th&gt;&lt;th&gt;Structured&lt;/th&gt;&lt;th&gt;Generic&lt;/th&gt;&lt;th&gt;Concurrent&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;C&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Coq&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;C#&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;C++&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;F#&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Go&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Haskell&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Java&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Javascript&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr class=&quot;ocaml&quot;&gt;&lt;td&gt;OCaml&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;PHP&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Python&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Ruby&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Scala&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Swift&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Typescript&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fa fa-check&quot;&gt;&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Languages have differing amounts of functional programming features, and depending on their initial design considerations, some languages are just easier than others to program functionally with,
+and therefore are more often used in that way. I&amp;#39;d consider these things to make a functional programming language:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;It has language features that support programming in a functional style, most importantly: first-class functions, i.e. functions that can be used as a basic unit of abstraction, can be passed around like data, and use function scope (i.e. closures). Besides this, support for immutability and partial application of functions I consider important.&lt;/li&gt;
+&lt;li&gt;Programming in a functional way is natural, concise and readable in the language. There is less value in having functional language features in a language with the intention of making it functional, if there is a large amount of syntax required for this style, or the constructs are somehow awkward, or readability is seriously compromised, compared to programming imperatively in that language.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If a language &lt;em&gt;only&lt;/em&gt; supports programming in a functional way, we can say that it is a &amp;#39;pure functional&amp;#39; language. Examples of these in the above table are &lt;a href=&quot;https://en.wikipedia.org/wiki/Coq&quot;&gt;Coq&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Haskell&quot;&gt;Haskell&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;One of the goals of all functional programming languages is to increase predictability and therefore robustness of code. In some ways the pattern of thinking required to understand algorithms coded functionally can feel less intuitive than considering the imperative equivalents. For example, when counting things in real-life, say a handful of coins, we are physically iterating over the collection with our eyes, and maintaining a variable with the count in our heads, which is incremented as we count. The functional equivalent doesn&amp;#39;t even make sense in that way in the real-world, but instead is a more abstract, mathematical way of thinking about a process. This certainly appeals to mathematicians and programmers.&lt;/p&gt;
+
+&lt;h2&gt;Why should we learn functional programming?&lt;/h2&gt;
+
+&lt;p&gt;The more abstract methods of thinking required when doing functional programming can make it seem harder than say object-oriented programming. However in principle you could perhaps imagine
+that given similar levels of practice and habituation, you may become equally proficient at any method of programming.&lt;/p&gt;
+
+&lt;p&gt;The biggest &amp;#39;barriers&amp;#39; to functional programming may be as much cultural popularity and general understanding of it. For example it is easy to imagine the objections of a business to using a language like OCaml currently - it would be immediately much harder to find employees for one thing. So naturally there&amp;#39;s a large inertia to change once particular systems of thought or tools become established. These changes must come gradually, and we are seeing lots of signs of functional programming becoming more and more established, which to me is exciting.&lt;/p&gt;
+
+&lt;p&gt;A big motivating reason for functional programming uptake increasing is the need for making use of parallelisation through cloud computing. Parallelisation of processes requires the elimination of state from core processing logic, pushing it to the boundaries of an application. This is one of the goals of &lt;a href=&quot;https://en.wikipedia.org/wiki/MapReduce&quot;&gt;MapReduce&lt;/a&gt;, a programming model important in the realm of &lt;a href=&quot;https://en.wikipedia.org/wiki/Big_data&quot;&gt;big data&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;With the creation of the &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; framework, its popular use in combination with the &lt;a href=&quot;https://github.com/reactjs/redux&quot;&gt;Redux&lt;/a&gt; library, and its massive explosion in popularity, functional programming ideas have been thrust firmly into the mainstream. Functional programming is now more important than ever to the average developer, and this is why it&amp;#39;s important to develop a good grounding in it.&lt;/p&gt;
+
+&lt;h2&gt;What is OCaml&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ocaml.org&quot;&gt;OCaml&lt;/a&gt; is a &lt;a href=&quot;https://ocaml.org/learn/tutorials/functional_programming.html&quot;&gt;mostly pure&lt;/a&gt; functional programming language with a concise, clean syntax, specifically designed for ease-of-use in real world situations.&lt;/p&gt;
+
+&lt;p&gt;OCaml is strongly-typed, but without all of the syntactical overhead we are used to with other strongly-typed languages like Java, by making use of &lt;a href=&quot;https://en.wikipedia.org/wiki/Type_inference&quot;&gt;type inference&lt;/a&gt;. This is a standout feature for me, and I&amp;#39;ve illustrated it below in the code examples.&lt;/p&gt;
+
+&lt;h2&gt;Basic Code Examples&lt;/h2&gt;
+
+&lt;h3&gt;Installation, Utop and semicolons &amp;#39;;..;&amp;#39;&lt;/h3&gt;
+
+&lt;p&gt;All the code examples here are meant to be paste-able into &lt;a href=&quot;https://opam.ocaml.org/blog/about-utop/&quot;&gt;utop&lt;/a&gt;. Utop is OCaml&amp;#39;s interactive shell. I can recommend going through &lt;a href=&quot;https://github.com/realworldocaml/book/wiki/Installation-Instructions&quot;&gt;these steps&lt;/a&gt;
+to get OCaml and Utop set up.&lt;/p&gt;
+
+&lt;p&gt;The code examples feature double-semicolons at the ends of expressions. These are necessary when the expressions in are pasted directly into Utop. However in normal programming in OCaml they are not necessary. The full understanding of this distinction is not trivial at first. I&amp;#39;m planning to write another post to really clear the issue up in a thorough way, as I did find it a bit of a struggle to gather all of the necessary information early on.&lt;/p&gt;
+
+&lt;p&gt;For each code example, I give code that can be pasted into Utop, then the output that&amp;#39;s displayed in Utop. Because I prefer to write code examples in actual files when I am learning a language, so that I can save them for later, I&amp;#39;ve also put all of the &lt;a href=&quot;https://github.com/robinrob/ocaml-code-examples/blob/master/ocaml_post_examples.ml&quot;&gt;code examples in a file&lt;/a&gt; that can be executed with the OCaml interpeter. This file demonstrates how double-semicolons are totally unnecessary in an OCaml program.&lt;/p&gt;
+
+&lt;h3&gt;Hello World&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;ocaml&quot;&gt;Printf.printf &quot;Hello World!\n&quot; ;;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thankfully in OCaml the Hello World remains self-explanatory.&lt;/p&gt;
+
+&lt;h3&gt;Variables&lt;/h3&gt;
+
+&lt;p&gt;In OCaml, all &lt;em&gt;values&lt;/em&gt; are immutable. We&amp;#39;re familiar with this already in another languages - for example in most popular languages strings are immutable. This means that appending one string to another actually results in a totally new string. But usually things like numbers are not immutable, and this allows them to be used as a &amp;#39;counter&amp;#39; in loops for example. In OCaml, the values of &lt;em&gt;all&lt;/em&gt; types are treated in this way.&lt;/p&gt;
+
+&lt;p&gt;The word &amp;#39;variable&amp;#39; in most languages actually has dual meaning - it refers both to a value which we hold a reference to, and that can vary, &lt;em&gt;and&lt;/em&gt; it has meaning in the mathematical sense of representing a variable in an equation. In OCaml, it is only the mathematical meaning of &amp;#39;variable&amp;#39; that is implied when we&amp;#39;re using the word.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;ocaml&quot;&gt;let age = 30 ;;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Output:
+&lt;code&gt;plaintext
+val age : int = 30
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Can we re-assign a variable to another value?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;ocaml&quot;&gt;let age = 30 ;;
+let age = 31 ;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Output:
+&lt;code&gt;plaintext
+val age : int = 30
+val age : int = 31
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This may &lt;em&gt;look&lt;/em&gt; like mutation, but it&amp;#39;s not. The second &lt;code&gt;let&lt;/code&gt; statement actually defines a new variable that happens to have the same name, and from that point on the reference to the previous &lt;code&gt;age&lt;/code&gt; variable is no longer in scope. To fully understand this it&amp;#39;s necessary to understand &lt;code&gt;let ... in&lt;/code&gt;. The above example is actually equivalent to:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;ocaml&quot;&gt;let age = 30 in (
+    Printf.printf &quot;age: %d\n&quot; age ;
+    let age = 31 in (
+        Printf.printf &quot;age: %d\n&quot; age ;
+    )
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This makes it clearer what is actually happening. In OCaml programs, &lt;code&gt;let ... in&lt;/code&gt; constructs are used to
+both initialise and define the scopes of variables. &lt;code&gt;let ... in&lt;/code&gt; blocks are to OCaml programs something like what axioms are to mathematical proofs.&lt;/p&gt;
+
+&lt;h3&gt;Functions&lt;/h3&gt;
+
+&lt;p&gt;Defining a function (that checks whether a given integer is even or odd):
+&lt;pre&gt;&lt;code class=&quot;ocaml&quot;&gt;let even x = x mod 2 = 0 ;;&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;output in &lt;code&gt;utop&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-plaintext&quot; data-lang=&quot;plaintext&quot;&gt;val even : int -&amp;gt; bool = &amp;lt;fun&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Calling a function:
+&lt;pre&gt;&lt;code class=&quot;ocaml&quot;&gt;even 4 ;;&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;output in &lt;code&gt;utop&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-plaintext&quot; data-lang=&quot;plaintext&quot;&gt;- : bool = true
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Pattern-matching, case analysis and nulls&lt;/h3&gt;
+
+&lt;p&gt;Let&amp;#39;s try a more complicated function. Compare these two example definitions of a &lt;code&gt;sum&lt;/code&gt; function written in Python (avoiding use of built-in functions) and OCaml:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;def sum(list):
+    sum = 0
+    for num in list:
+        sum += num
+    return sum
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;ocaml&quot;&gt;let rec sum list =
+    match list with
+    | [] -&gt; 0
+    | first :: rest -&gt; first + sum rest
+;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In English, the OCaml example is saying:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt; &lt;code&gt;sum&lt;/code&gt; is a recursive function that takes one argument &lt;code&gt;list&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt; Match the input argument &lt;code&gt;list&lt;/code&gt; with the following cases:
+
+&lt;ul&gt;
+&lt;li&gt; When &lt;code&gt;list&lt;/code&gt; is an empty list, return 0&lt;/li&gt;
+&lt;li&gt; In all other cases, sum the first element with the remainder of the list&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since null values &lt;a href=&quot;https://ocaml.org/learn/tutorials/null_pointers_asserts_and_warnings.html&quot;&gt;do not even exist&lt;/a&gt; in OCaml, we have explicitly handled all cases. This example illustrates OCaml&amp;#39;s use of
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Pattern_matching&quot;&gt;pattern matching&lt;/a&gt;
+to do &lt;a href=&quot;http://www2.lib.uchicago.edu/keith/ocaml-class/pattern-matching.html&quot;&gt;case analysis&lt;/a&gt;. I think this code example is really cool, for the amount that&amp;#39;s being expressed in such a small amount of code, and in a clear way. And for the realisation that OCaml effectively designs out a lot of potential program bugs.&lt;/p&gt;
+
+&lt;h3&gt;Easter egg - literal number formatting&lt;/h3&gt;
+
+&lt;p&gt;To take a mental rest - an unexpected feature of OCaml is the ability to add underscores to long number literals to improve readability:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;ocaml&quot;&gt;let big_num = 123_456_789 ;;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;output in &lt;code&gt;utop&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-plaintext&quot; data-lang=&quot;plaintext&quot;&gt;val x : int = 123456789
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Also works with floats (also note that the underscores can go wherever you want, not just every 3 digits):
+&lt;pre&gt;&lt;code class=&quot;ocaml&quot;&gt;let big&lt;em&gt;num = 123&lt;/em&gt;456.65&lt;em&gt;43&lt;/em&gt;21 ;;&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;output in &lt;code&gt;utop&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-plaintext&quot; data-lang=&quot;plaintext&quot;&gt;val big_num : float = 123456.654321
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Arguably not that useful at first sight, but interesting nonetheless and it demonstrates OCaml&amp;#39;s commitment to reducing human errors in code, and prioritising expressiveness. I noticed that the syntax-highlighting library used in this blog couldn&amp;#39;t deal with such eccentric syntax.&lt;/p&gt;
+
+&lt;h3&gt;Type Inference&lt;/h3&gt;
+
+&lt;p&gt;I used to be under the impression that static typing necessarily came along with a lot of extra syntax, but OCaml&amp;#39;s use of type inference along with its minimalist syntax combine to allow you to write terse code even whilst gaining the benefits of static type checking, plus more.&lt;/p&gt;
+
+&lt;p&gt;So far in all of the examples, OCaml has been able to infer the types of things based on their usages.
+So for example if you try to pass an Int value to something expecting a Float, OCaml will shout at you:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;ocaml&quot;&gt;Printf.printf &quot;%f&quot; 4 ;;&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-plaintext&quot; data-lang=&quot;plaintext&quot;&gt;Error: This expression has type float but an expression was expected of type
+         int
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This doesn&amp;#39;t seem surprising when demonstrated by running commands in Utop, but OCaml does this type analysis at &lt;em&gt;compile time&lt;/em&gt;, as demonstrated by uncommenting my code example &lt;a href=&quot;http://localhost:3000/blog/getting-started-with-ocaml&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Type inference feels almost magical at first, but once you realise that all of the information required to infer types is right there in the program, and appreciate the extra work being done by the compiler, it makes total sense. Other languages that make use of type inference are Typescript and Swift.&lt;/p&gt;
+
+&lt;h2&gt;OCaml editor support&lt;/h2&gt;
+
+&lt;p&gt;What is the tooling support for OCaml like? It&amp;#39;s actually pretty good. For an editing environment, I&amp;#39;m using &lt;a href=&quot;https://code.visualstudio.com&quot;&gt;VS Code&lt;/a&gt; with this &lt;a href=&quot;https://github.com/reasonml-editor/vscode-reasonml&quot;&gt;ReasonML&lt;/a&gt;
+ plugin. The Atom editor also appears to have a popular &lt;a href=&quot;https://atom.io/packages/language-ocaml&quot;&gt;OCaml package&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The vscode-reasonml plugin gives some cute-looking camel icons to the &lt;code&gt;.ml&lt;/code&gt; files:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/vscode_ocaml.png&quot;&gt;&lt;/img&gt;&lt;/p&gt;
+
+&lt;p&gt;I was pleased to see that &lt;a href=&quot;https://github.com/jneen/rouge&quot;&gt;Rouge&lt;/a&gt;, the syntax-highlighting plugin used in this blog, supports OCaml syntax, hence the nicely-looking code snippets in this post.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s always re-assuring to know that a language or framework is not so niche as to not have tools supporting it, when setting out to learn it.&lt;/p&gt;
+
+&lt;h2&gt;Are companies using OCaml?&lt;/h2&gt;
+
+&lt;p&gt;Your pragmatic side should also be interested in the direct value of learning OCaml to your career.&lt;/p&gt;
+
+&lt;p&gt;This is a really nice &lt;a href=&quot;https://www.youtube.com/watch?v=v1CmGbOGb2I&quot;&gt;presentation&lt;/a&gt; on OCaml by an employee of Jane Street, which includes a discussion of the practicalities of using OCaml in the real world. Entrance into the OCaml community is not recommended without some familiarity of Jane Street - they are a quantitative trading firm who have made exentensive use of OCaml. They have been a big contributor to OCaml - they wrote the &lt;a href=&quot;https://github.com/janestreet/core&quot;&gt;Core&lt;/a&gt; library, which is effectively Lodash for Ocaml! &lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s easy to see why OCaml would be desirable in automated trading - where speed and accuracy of code are critical. Here is a list of &lt;a href=&quot;https://ocaml.org/learn/companies.html&quot;&gt;companies&lt;/a&gt; using OCaml - there&amp;#39;s a few entries for financial companies. In general, the domains of companies using OCaml tend to be more technical than average, but the list shows a good amount of diversity.&lt;/p&gt;
+
+&lt;p&gt;Then you only have to look to &lt;a href=&quot;https://reasonml.github.io&quot;&gt;Reason&lt;/a&gt;, a language which effectively brings OCaml to Javascript, to be further convinced that OCaml is something worth learning.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 13 Mar 2018 00:00:00 +0000</pubDate>
+        <link>https://rsmith.io/blog/getting-started-with-ocaml/</link>
+        <guid isPermaLink="true">https://rsmith.io/blog/getting-started-with-ocaml/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Deciding What to Learn Next as a Programmer</title>
@@ -961,106 +1212,6 @@ the process in future.&lt;/p&gt;
         <pubDate>Fri, 30 Oct 2015 00:00:00 +0000</pubDate>
         <link>https://rsmith.io/blog/personal-code-library/</link>
         <guid isPermaLink="true">https://rsmith.io/blog/personal-code-library/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Learn Regex or Regret It</title>
-        <description>&lt;p&gt;Do you like challenging logic puzzles? Games that give you a set of root principles then offer up increasingly hard
-problems that require ever-more creative ways of using the root principles to solve?&lt;/p&gt;
-
-&lt;p&gt;I do, and once I actually sat down to dedicate some time to the subject of regular expressions, the
-above viewpoint is the way in which I came to view this learning process. Learning how to use regular expressions is an exercise of
-applying the known rules of the game to situations that require your creativity, logical thinking and intuition to solve.&lt;/p&gt;
-
-&lt;p&gt;With all things that are difficult to do well, if you can make the process of mastering it into a game you will perform
-much better. The task of solving regex problems is a &lt;em&gt;perfect&lt;/em&gt; candidate for game-making!&lt;/p&gt;
-
-&lt;p&gt;If you only reach this stage in your appreciation of regular expressions then you may already find great value in them. But they
-are also among one of the few truly powerful tools available to programmers that transcend programming language, framework
-or project that you are working on. If you find Javascript to be a language worth learning because of its popularity
-and relevance - a mere programming language, or AngularJS a framework worth learning because it&amp;#39;s popular at the
-moment - then you should logically view a tool like regular expressions as being of great importance and relevance in your profession.
-Regular expressions have been around for decades and have changed little in their basic philosophy and syntax.&lt;/p&gt;
-
-&lt;p&gt;More important than any of the above great reasons for learning how to use regular expressions, the fact remains that they
-are an incredibly powerful and efficient way of solving certain types of text-reading and text-manipulation problems.
-To take a (simplified) example that is well-suited to the application of a regex solution: let&amp;#39;s say that you want
-to read in some user input to specify the first line of an address, which must be a number followed by alphabetical
-strings of characters, e.g. &amp;#39;41 Princes Street&amp;#39;. Furthermore, each alphabetical string must have its initial
-character capitalised. So &amp;#39;41 123 Princes Street&amp;#39; would be invalid, as would &amp;#39;41 princes Street&amp;#39; or &amp;#39;41 Princes123 Street&amp;#39;. &lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s first solve the problem without using a regex. You may write some code like this (for example in Python):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;#!/usr/bin/env python
-
-import sys
-
-address = sys.argv[1]
-
-parts = address.split(' ')
-
-try:
-    house_number = int(parts[0])
-    street = parts[1:-1]
-
-    for street_part in street:
-        assert street_part.istitle() and street_part.isalpha()
-
-    print 'Valid address!'
-
-except Exception as e:
-    print 'Invalid address'
-    
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;An equivalent script using a regex method might go like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;#!/usr/bin/env python
-
-import sys, re
-
-address = sys.argv[1]
-
-regex = re.compile('\A[0-9]+ ([A-Z][a-z]+\ ?)+\Z')
-res = regex.match(address)
-
-if hasattr(res, 'group'):
-    print 'Valid address!'
-    
-else:
-    print 'Invalid address'
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The regular expression says: match a string with the following properties:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Begins with a string of one more more digits&lt;/li&gt;
-&lt;li&gt;The initial string of digits is followed by a space character, then one or more of: (alphabetical string with capitalised initial character, optionally followed by a space character)&lt;/li&gt;
-&lt;li&gt;The string ends on the last of the occurrence of (alphabetical string with capitalised initial character, optionally followed by a space character)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;For this particular example with the given constraints on the format of the address I would prefer the regular expression
-solution, as it expresses very concisely the conditions being imposed for validity of the input. For me it is a lot
-easier to write and to read and therefore easier to get right and to not make mistakes. It also utilises a neat aspect
-of regular expressions: recursive matching of a sub-expression (the alphabetical strings following the number in the address
-line).&lt;/p&gt;
-
-&lt;p&gt;Not every instance of any given type of problem is best solved using any particular tool, and this is true with regular 
-expressions. A judgement must be made based on many factors and constraints on which is the best method to use to solve the problem,
-where &amp;#39;best&amp;#39; is defined by a lot of factors specific to the problem and the environment and circumstances in which it is being solved.
-Regular expressions are just one additional tool that you have available for consideration when making this decision.&lt;/p&gt;
-
-&lt;p&gt;The reason why I think that it would be regretful not to learn how to use regular expressions, is that since making the
-effort to learn how to use this tool, I have personally encountered many situations where they have been a priceless tool, saving
-me time and frustration, and giving a feeling of satisfaction when the correct regex for a problem is discovered! It&amp;#39;s
-not often that such a simple, short string of characters can give such power.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 29 Aug 2015 00:00:00 +0100</pubDate>
-        <link>https://rsmith.io/blog/learn-regex-or-regret-it/</link>
-        <guid isPermaLink="true">https://rsmith.io/blog/learn-regex-or-regret-it/</guid>
         
         
       </item>
