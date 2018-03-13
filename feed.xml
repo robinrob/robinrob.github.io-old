@@ -6,8 +6,8 @@
 </description>
     <link>https://rsmith.io/</link>
     <atom:link href="https://rsmith.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 13 Mar 2018 14:04:31 +0000</pubDate>
-    <lastBuildDate>Tue, 13 Mar 2018 14:04:31 +0000</lastBuildDate>
+    <pubDate>Tue, 13 Mar 2018 17:00:48 +0000</pubDate>
+    <lastBuildDate>Tue, 13 Mar 2018 17:00:48 +0000</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
     
       <item>
@@ -111,7 +111,8 @@ to get OCaml and Utop set up.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;ocaml&quot;&gt;Printf.printf &quot;Hello World!\n&quot; ;;&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Thankfully in OCaml the Hello World remains self-explanatory.&lt;/p&gt;
+&lt;p&gt;Thankfully in OCaml the Hello World remains self-explanatory. This example shows us the use of the built-in &lt;code&gt;Printf&lt;/code&gt; module to print output, and also the simple syntax for passing arguments into functions - we don&amp;#39;t
+need parentheses around the arguments.&lt;/p&gt;
 
 &lt;h3&gt;Variables&lt;/h3&gt;
 
